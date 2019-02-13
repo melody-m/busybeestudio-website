@@ -1,0 +1,229 @@
+.margin-bottom-small {
+  margin-bottom: 3rem; }
+
+.margin-bottom-medium {
+  margin-bottom: 6rem; }
+
+.margin-bottom-big {
+  margin-bottom: 10rem; }
+
+.extend {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s ease-out; }
+
+.none {
+  opacity: 0;
+  transform: scale(0);
+  transition: all .5s ease-out; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* =10px on normal browser considering a default of 16px=100% on browsers*/ }
+
+body {
+  box-sizing: border-box; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.row {
+  max-width: 120rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 3rem; }
+  .row [class^="col-"] {
+    float: left;
+    position: relative; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 3rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 3rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 3rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 3rem) / 3) + 3rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 3rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
+  .row .col-1-of-5 {
+    width: calc((100% - 4 * 3rem) / 5); }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #5a5a5a; }
+
+h1 {
+  font-size: 6rem;
+  font-family: 'Old Standard TT', serif; }
+
+h2 {
+  font-size: 4rem;
+  letter-spacing: .3rem;
+  font-weight: 400;
+  font-family: 'Old Standard TT', serif; }
+
+h3 {
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  font-weight: 400;
+  font-family: 'Old Standard TT', serif; }
+
+h4 {
+  font-size: 2.2rem;
+  letter-spacing: .1rem;
+  font-weight: 400;
+  font-family: 'Old Standard TT', serif;
+  text-align: center; }
+
+.scribble {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 10rem;
+  color: #cccccc; }
+
+.team__testimonials--id {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 3rem; }
+
+.team__testimonials--rate {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 2rem; }
+
+.landpage {
+  background-image: url(../img/landpage.jpg);
+  background-size: cover;
+  background-position: bottom;
+  width: 100vw;
+  height: 95vh;
+  margin: 0 auto;
+  position: relative; }
+
+.header__logo {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ffcccc;
+  position: absolute;
+  top: 2rem;
+  left: 2rem; }
+
+.header__title {
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.welcome {
+  padding: 6rem 0;
+  background-color: #bfe5ff;
+  font-family: 'Old Standard TT', serif; }
+  .welcome__title {
+    position: relative; }
+  .welcome__w {
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    z-index: 1; }
+  .welcome__welc {
+    z-index: 5; }
+  .welcome__subtitle {
+    position: absolute;
+    top: 4rem;
+    left: -8rem; }
+
+.classes {
+  margin: 8rem 0; }
+  .classes__gallery {
+    width: 120rem;
+    height: 65vh;
+    margin: 12rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url(../img/sewing.jpg);
+    background-repeat: no-repeat;
+    background-position: center; }
+  .classes__class {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .classes__class--1 {
+      background-image: url(../img/pottery2.jpg); }
+    .classes__class--2 {
+      background-image: url(../img/drawing.jpg); }
+    .classes__class--3 {
+      background-image: url(../img/sewing.jpg); }
+    .classes__class--4 {
+      background-image: url(../img/flower.jpg); }
+    .classes__class--5 {
+      background-image: url(../img/crea.jpg); }
+  .classes__details {
+    padding: 6rem 0;
+    background-color: #ffff99;
+    position: relative; }
+    .classes__details--sub {
+      position: absolute;
+      top: 50%;
+      left: 4rem;
+      transform: translate(-50%, -50%); }
+  .classes__text {
+    text-align: justify;
+    padding: 0 2rem; }
+
+.width {
+  width: calc(100% / 5); }
+
+.studio {
+  margin: 8rem 0; }
+  .studio__photo {
+    width: 100%;
+    height: 40vh;
+    background-color: beige; }
+
+.team {
+  margin: 8rem 0; }
+  .team__photo {
+    width: 100%;
+    height: 40%;
+    background-color: aquamarine; }
+  .team__testimonials {
+    background-color: #ffcc99;
+    margin-top: 10rem;
+    padding: 6rem 0;
+    position: relative; }
+    .team__testimonials--sub {
+      position: absolute;
+      top: 50%;
+      left: 4rem;
+      transform: translate(-50%, -50%); }
+
+.gallery {
+  margin: 8rem 0; }
+  .gallery__photo {
+    width: 100%;
+    height: 25%;
+    background-color: bisque; }
+
+.contact {
+  margin: 8rem 0;
+  background-color: #ccffcc;
+  height: 65vh; }

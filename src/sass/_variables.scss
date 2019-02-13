@@ -1,0 +1,49 @@
+//COLORS
+
+$color-one:#bfe5ff;
+$color-two:#ffcc99;
+$color-three:#ffcccc;
+$color-four:#ffff99;
+$color-five:#99ff99;
+$color-five-light:#ccffcc;
+
+$color-grey-light: #cccccc;
+$color-grey-medium: #999999;
+$color-grey-dark: #5a5a5a;
+
+
+
+// GRID
+
+$grid-width: 120rem;
+$gutter-vertical: 3rem;
+$gutter-horizontal: 3rem;
+
+.margin-bottom-small{
+  margin-bottom: 3rem;
+}
+.margin-bottom-medium{
+  margin-bottom: 6rem;
+}
+.margin-bottom-big{
+  margin-bottom: 10rem;
+}
+
+//JS CLASSES
+
+.extend{
+    width: 100%;   
+    //z-index: 10;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: all .3s ease-out;
+  }
+
+.none{
+  opacity: 0;
+  transform: scale(0);
+  transition: all .5s ease-out;
+}
+
+  

@@ -1,0 +1,15 @@
+{
+  "name": "busybee",
+  "version": "1.0.0",
+  "description": "BusyBee studio",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
+    "devserver": "live-server"
+  },
+  "author": "Melody Mahoney",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

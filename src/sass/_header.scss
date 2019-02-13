@@ -1,0 +1,61 @@
+.landpage{
+    background-image: url(../img/landpage.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    width: 100vw;
+    height: 95vh;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.header{
+
+    &__logo{
+        width: 6rem;
+        height: 6rem;
+        background-color: $color-three;
+
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    &__title{
+        color: black;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+.welcome{
+
+    padding: 6rem 0;
+    background-color: $color-one;
+    font-family: 'Old Standard TT', serif;
+
+    &__title{
+        position: relative;
+    }
+
+    &__w{
+        position: absolute;
+        top: -2rem;
+        left: -2rem;
+        z-index: 1;
+    }
+
+    &__welc{
+        z-index: 5;
+    }
+
+    &__subtitle{
+        position: absolute;
+        top: 4rem;
+        left: -8rem;
+    }
+}
