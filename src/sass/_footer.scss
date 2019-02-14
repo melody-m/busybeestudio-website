@@ -1,0 +1,46 @@
+.footer{
+    background-color: $color-grey-medium;
+    color: white;
+    padding: 5rem;
+    padding-bottom: 2rem;
+    
+
+    &__container{
+        // display: flex;
+        // flex-direction: row;
+        
+    }
+
+    &__logo{
+        width: 80%;
+        display: inline-block;
+
+        &--img{
+        width: 8rem;
+        height: 8rem;
+        background-color: aquamarine;        
+        }
+        
+    }
+
+    &__com{
+        display: inline-block;
+        width: 10%;
+
+    }
+    &__catch{
+        margin-bottom: 2rem;
+    }
+
+    &__follow{
+        width: 4rem;
+        height: 4rem;
+        background-color: beige;
+        display: inline-block;
+       
+    }
+
+    &__copyright{
+        margin-top: 2rem;
+    }
+}

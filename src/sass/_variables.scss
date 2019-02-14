@@ -1,11 +1,16 @@
 //COLORS
 
 $color-one:#bfe5ff;
+$color-one-dark:#4299d5;
 $color-two:#ffcc99;
+$color-two-dark:#ff9933;
 $color-three:#ffcccc;
+$color-three-dark:#ff9999;
 $color-four:#ffff99;
+$color-four-dark:#ffd200;
 $color-five:#99ff99;
 $color-five-light:#ccffcc;
+$color-five-dark:#33ff34;
 
 $color-grey-light: #cccccc;
 $color-grey-medium: #999999;
@@ -16,8 +21,12 @@ $color-grey-dark: #5a5a5a;
 // GRID
 
 $grid-width: 120rem;
-$gutter-vertical: 3rem;
-$gutter-horizontal: 3rem;
+$gutter-vertical: 1.5rem;
+$gutter-horizontal: 1.5rem;
+
+.margin-bottom-tiny{
+  margin-bottom: 1rem;
+}
 
 .margin-bottom-small{
   margin-bottom: 3rem;
@@ -29,21 +38,5 @@ $gutter-horizontal: 3rem;
   margin-bottom: 10rem;
 }
 
-//JS CLASSES
 
-.extend{
-    width: 100%;   
-    //z-index: 10;
-    position: absolute;
-    top:0;
-    left: 0;
-    transition: all .3s ease-out;
-  }
 
-.none{
-  opacity: 0;
-  transform: scale(0);
-  transition: all .5s ease-out;
-}
-
-  

@@ -1,10 +1,10 @@
 .landpage{
     background-image: url(../img/landpage.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
 
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     margin: 0 auto;
 
     position: relative;
@@ -23,10 +23,12 @@
     }
 
     &__title{
-        color: black;
+        width: 50rem;
+        color: $color-three-dark;
         position: absolute;
-        top: 40%;
-        left: 50%;
+        bottom: 20%;
+        right: 0;
+
         transform: translate(-50%,-50%);
     }
 }
@@ -34,19 +36,24 @@
 
 .welcome{
 
-    padding: 6rem 0;
+    padding: 7rem 0;
+    border-top: 4px dotted white;
+    border-bottom: 4px dotted white;
     background-color: $color-one;
     font-family: 'Old Standard TT', serif;
 
     &__title{
-        position: relative;
+        margin: 2.5rem 0;
+    }
+
+    &__text{
+        padding-left: 3rem;
     }
 
     &__w{
-        position: absolute;
-        top: -2rem;
-        left: -2rem;
-        z-index: 1;
+        background-image: url(../img/W.png);
+        top: -3.5rem;
+        left: -5.5rem;
     }
 
     &__welc{

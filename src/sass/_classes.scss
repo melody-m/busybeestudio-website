@@ -1,41 +1,122 @@
 .classes{
 
-    margin: 8rem 0;
+    margin-top: 14rem;
+
+    &__01{
+        background-image: url(../img/01.png);
+        top: -5.5rem;
+        left: -5rem;
+        }
 
     &__gallery{
         width: 120rem;
         height: 65vh;
         
         margin: 12rem auto;
+        
         position: relative;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
-        background-image: url(../img/sewing.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
+
+        overflow: hidden
+        
+    }
+    &__info{
+        width: 25%;
+        height: 100%;
+        background-color: rgba(white, .8);
+    }
+
+    &__content{
+        width: 50%;
+        height: 40%;        
+        background-color: rgba(white, .8);
+    }
+
+    &__subtitle{
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform:translateX(-50%);    
+        text-align: center;   
+       
+        padding: 1rem;    
+        transition: all .3s ease-in-out;
         
     }
 
     &__class{
-        width: 100%;
         height: 100%;
+        border-right: .5rem solid white;
+        background-color: antiquewhite;        
         background-repeat: no-repeat;
-        background-position: center;
+        background-size: cover;
+        position: relative;
+        cursor: pointer;
         
-        &--1{background-image: url(../img/pottery2.jpg);}
-        &--2{background-image: url(../img/drawing.jpg);}
-        &--3{background-image: url(../img/sewing.jpg);}
-        &--4{background-image: url(../img/flower.jpg);}
-        &--5{background-image: url(../img/crea.jpg);}
-    }
+        transition: all .5s ease-out;
+        
+        &--1{
+            background-image: linear-gradient(
+                to bottom, 
+                rgba($color-two, 0.5), 
+                rgba($color-two, 1)),             
+                url(../img/pottery.jpg);
+            background-position: 55% center;
+        }
+        &--2{
+            background-image: linear-gradient(
+                to bottom, 
+                rgba($color-three, 0.5), 
+                rgba($color-three, 1)),       
+                url(../img/drawing2.jpg);
+            background-position: 65% center;
+        }
+        &--3{
+            background-image: linear-gradient(
+                to bottom, 
+                rgba($color-four, 0.5), 
+                rgba($color-four, 1)), 
+                url(../img/sewing.jpg);
+            background-position: 18% center;
+        }
+        &--4{
+            background-image: linear-gradient(
+                to bottom, 
+                rgba($color-five, 0.5), 
+                rgba($color-five, 1)), 
+                url(../img/flower.jpg);
+            background-position: center;
+        }
+        &--5{
+            background-image: 
+            linear-gradient(
+                to bottom, 
+                rgba($color-one, 0.7), 
+                rgba($color-one, 1)), 
+                url(../img/crea.jpg);
+            background-position: center;
+        }
 
+    &:hover .classes__subtitle{
+        transform: translate(-50%, -3rem);
+        transition: all .3s ease-in-out;
+    }
+}
+
+  
     &__details {
         padding: 6rem 0;
         background-color: $color-four;
         position: relative;
+        border-top: 3px dotted $color-grey-light;
+
 
         &--sub{
             position: absolute;
@@ -49,18 +130,48 @@
         text-align: justify;
         padding: 0 2rem;
     }
+}
 
-    // &__content{
-    //     display: none;
-    // }
+//JS CLASSES
+
+.extend{
+    width: 100%;   
+    //z-index: 10;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: left .5s ease-out;
+}
+
+.position{
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: left .5s ease-out;
+}
+
+.none{
+  opacity: 0;
+  //transform: scale(0);
+  transition: all .3s ease-out;
 }
 
 .width{
-    //width: 22rem;
     width: calc(100% / 5);
-   
+}
 
-    // &:not(:last-child) {
-    //     margin-right: 2rem;
-    // }
+.slideSideR {       
+    padding: 4rem;
+    position: absolute;
+    top: 8rem; right: 8rem; 
+    transition: all .5s ease-out, visibility 0s .2s;
+    transform: translateX(200%);
+}
+
+.slideSideL {       
+    padding: 4rem;
+    position: absolute;
+    top: 0; left: 0; 
+    transition: all .5s ease-out, visibility 0s .2s;
+    transform: translateX(-100%);
 }

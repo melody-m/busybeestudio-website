@@ -2,45 +2,74 @@
 // font-family: 'Open Sans', sans-serif;
 // font-family: 'EB Garamond', serif;
 
+@mixin oldFont {
+    letter-spacing: .1rem;
+    font-weight: 400;
+    font-family: 'Old Standard TT', serif;
+}
+
+
+
 body{
     font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
     color: $color-grey-dark;
 }
 h1{
-    font-size: 6rem;
-    font-family: 'Old Standard TT', serif;
+    font-size: 10rem;
+    @include oldFont;
 }
 
 h2{
     font-size: 4rem;
+    @include oldFont;
     letter-spacing: .3rem;
-    font-weight: 400;
-    font-family: 'Old Standard TT', serif;
+    
 }
 
 h3{
     transform: rotate(-90deg);
     text-transform: uppercase;
     font-size: 2rem;
-    letter-spacing: .1rem;
-    font-weight: 400;
-    font-family: 'Old Standard TT', serif;
+    @include oldFont;
 }
 
 h4{
+    @include oldFont;
     font-size: 2.2rem;
-    letter-spacing: .1rem;
-    font-weight: 400;
-    font-family: 'Old Standard TT', serif;
     text-align: center;
 
 }
 .scribble{
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 10rem;
-    color: $color-grey-light;
+    width: 12rem;
+    height: 12rem;       
+    position: absolute;    
+    z-index: 1;
 }
+
+.classes{
+    &__subtitle{
+        @include oldFont;
+        font-size: 3rem;
+    }
+
+    &__info{
+        &--title{
+            @include oldFont;
+            font-size: 3rem;
+        }
+        &--subtitle{
+            @include oldFont;
+            font-size: 2rem;
+        }
+        &--text{
+            font-weight: 300;
+            letter-spacing: .1rem;
+        }
+
+    }
+}
+
 
 .team__testimonials{
     &--id{
@@ -49,6 +78,54 @@ h4{
     }
     &--rate{
     font-family: 'Fredericka the Great', cursive;
-    font-size: 2rem;
+    font-size: 1.8rem;
     }
 }
+
+.team__desc{
+    &--name{
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+}
+.contact{
+    &__info{
+        @include oldFont;
+        font-size: 1.8rem;        
+        text-transform: uppercase;
+    }
+
+    &__details, &__label{
+        font-weight: 300;
+        letter-spacing: .1rem;
+    }
+
+    &__field{
+        font-family: 'Open Sans', sans-serif;
+
+        &::placeholder{
+            font-weight: 300;
+            opacity: .7;
+            
+        }
+    }
+    &__label{
+        line-height: 2rem;
+    }
+
+}
+
+.footer{
+    &__copyright{
+        @include oldFont;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    &__com{
+        @include oldFont;        
+    }
+}
+

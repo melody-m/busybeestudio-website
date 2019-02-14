@@ -1,6 +1,55 @@
 .contact{
-    margin: 8rem 0;
+    
+    padding: 12rem 0;
     background-color: $color-five-light;
 
-    height: 65vh;
+    &__05{
+        background-image: url(../img/05.png);
+        top: -5.5rem;
+        left: -4.5rem;
+    }
+
+    &__info{
+        width: 50%;
+        float: left;
+        margin-bottom: 2rem;
+    }
+
+    &__details {
+        width: 50%;
+        float: left;
+        margin-bottom: 2rem;
+    }
+
+    &__form{
+        padding: 0 2rem;
+        width: 100%;
+    }
+
+
+    &__label{
+        padding: .5rem;
+    }
+
+    &__field{
+        min-width: 70%;
+        float: right;
+        margin-right: 4rem;
+        padding: .5rem;
+        margin-bottom: 1rem;
+
+        outline: none;
+        
+        &:focus{
+
+            outline: 2px solid $color-five-dark;
+        }
+
+        &--msg{
+            height: 20rem;
+            resize: none;
+            overflow: auto;
+            
+        }
+    }
 }

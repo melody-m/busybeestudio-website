@@ -1,10 +1,37 @@
 .team{
-    margin: 8rem 0;
+    border-top: 3px dotted $color-grey-light;
+    padding-top: 15rem;
+
+    &__03{
+        background-image: url(../img/03.png);
+        top: -5.5rem;
+        left: -4.5rem;
+    }
+
+    &__container{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__desc{
+        text-align: center;
+        
+    }
 
     &__photo{
         width: 100%;
-        height: 40%;
+        height: 35rem;
         background-color: aquamarine;
+        background-position: center;
+        background-size: cover;
+
+
+        &--1{background-image: url(../img/team01.jpg);}
+        &--2{background-image: url(../img/team02.jpg);}
+        &--3{background-image: url(../img/team03.jpg);}
+        &--4{background-image: url(../img/team04.jpg);}
+        &--5{background-image: url(../img/team05.jpg);}
+        &--6{background-image: url(../img/team06.jpg);}
     }
 
     &__testimonials{
@@ -12,6 +39,9 @@
         margin-top: 10rem;
         padding: 6rem 0;
         position: relative;
+        border-top: 3px dotted $color-grey-light;
+        border-bottom: 3px dotted $color-grey-light;
+
 
         &--sub{
             position: absolute;
@@ -20,6 +50,53 @@
             transform: translate(-50%, -50%);
         }
 
-
+        &--quote{
+            position: relative;
+        }
     }
+
+    &__quote{
+        width: 8rem;
+        height: 8rem;
+        background-image: url(../img/quote.png);
+        position: absolute;
+        &--1{
+            top:-5rem;
+            left:-9rem;
+        }
+        &--2{
+            bottom: -5rem;
+            right: -8rem;
+            transform: rotate(180deg);
+
+        }
+    }
+
+    &__container{
+
+        &:hover {
+            & .slide { 
+                transform: translateY(0%);                
+                transition: all .4s ease-out;
+            }
+
+            & .team__photo{
+                transform: scale(1.1);
+
+                transition: all .2s ease-out;
+            }
+          }
+    }
+}
+
+.slide {
+    background-image: linear-gradient(to bottom,
+		rgba($color-three, 1) 65%,
+        rgba($color-three, 0.5));
+        
+    padding: 4rem;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    transition: all .2s ease-in-out, visibility 0s .2s;
+    transform: translateY(100%);
 }
