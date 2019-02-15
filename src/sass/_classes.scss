@@ -1,3 +1,40 @@
+@mixin classBG-1{
+    background-image: linear-gradient(
+        to bottom, 
+        rgba($color-two, 0.5), 
+        rgba($color-two, 1)),             
+        url(../img/pottery.jpg);
+}
+@mixin classBG-2{
+    background-image: linear-gradient(
+        to bottom, 
+        rgba($color-three, 0.5), 
+        rgba($color-three, 1)),       
+        url(../img/drawing2.jpg);    
+}
+@mixin classBG-3{
+    background-image: linear-gradient(
+        to bottom, 
+        rgba($color-four, 0.5), 
+        rgba($color-four, 1)), 
+        url(../img/sewing.jpg);
+}
+@mixin classBG-4{
+    background-image: linear-gradient(
+        to bottom, 
+        rgba($color-five, 0.5), 
+        rgba($color-five, 1)), 
+        url(../img/flower.jpg);
+}
+@mixin classBG-5{
+    background-image:linear-gradient(
+        to bottom, 
+        rgba($color-one, 0.7), 
+        rgba($color-one, 1)), 
+        url(../img/crea.jpg);
+}
+
+
 .classes{
 
     margin-top: 14rem;
@@ -30,13 +67,108 @@
     &__info{
         width: 25%;
         height: 100%;
-        background-color: rgba(white, .8);
+        padding: 5rem;
+        background-color: rgba(white, .8);        
+    }
+
+    &__contentBox{
+        width: 75%;
+        height: 100%;     
+                
+    }
+
+    &__contentRelative{
+        position: relative;        
+        height: 100%;
     }
 
     &__content{
-        width: 50%;
-        height: 40%;        
-        background-color: rgba(white, .8);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 80%;   
+        
+        padding: 3rem;  
+        background-color: rgba(white, .8);        
+
+        &--gallery{
+            width: 100%;            
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+        &--text{
+            padding: 0 1rem;
+        }
+
+        &--img{
+            width: 32%;
+            height: 15rem;
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right:.5rem;
+            }
+
+            &-1{background-image: url(../img/pottery1.jpg)}
+            &-2{background-image: url(../img/pottery2.jpg)}
+            &-3{background-image: url(../img/pottery3.jpg)}
+            &-4{background-image: url(../img/drawing.jpg)}
+            &-5{background-image: url(../img/drawing1.jpg)}
+            &-6{background-image: url(../img/drawing3.jpg)}
+            &-7{background-image: url(../img/sewing1.jpg)}
+            &-8{background-image: url(../img/sewing2.jpg)}
+            &-9{background-image: url(../img/sewing3.jpg)}
+            &-10{background-image: url(../img/flower1.jpg)}
+            &-11{background-image: url(../img/flower2.jpg)}
+            &-12{background-image: url(../img/flower3.jpg)}
+            &-13{background-image: url(../img/crea1.jpg)}
+            &-14{background-image: url(../img/crea2.jpg)}
+            &-15{background-image: url(../img/crea3.jpg)}
+
+        }
+        &--btn{
+            border: none;
+            background-color: $color-two-dark;
+            padding: 1rem;
+            float: right;
+            cursor: pointer;            
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all .3s;
+
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+                
+            }
+        }
+
+        &--close{
+            font-size: 4rem;
+            margin-right: 2rem;
+            color: white;
+            float: right;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            outline: none;
+        }
+    }
+
+    &__slideL {       
+        position: absolute;
+        top: 0; left: 0; 
+        transition: all .2s ease-out, visibility 0s .2s;        
+        transform: translateX(-100%);
+    }
+
+    &__slideR {     
+        position: absolute;
+        top: 0rem; right: 0rem; 
+        transition: all .5s ease-out, visibility 0s .2s;
+        transform: translateX(200%);
     }
 
     &__subtitle{
@@ -45,62 +177,42 @@
         left: 50%;
         transform:translateX(-50%);    
         text-align: center;   
+        cursor: pointer;
        
         padding: 1rem;    
-        transition: all .3s ease-in-out;
-        
+        transition: all .5s ease-in-out;        
     }
 
     &__class{
+        width: calc(100% / 5);
         height: 100%;
         border-right: .5rem solid white;
         background-color: antiquewhite;        
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        cursor: pointer;
+        
         
         transition: all .5s ease-out;
         
         &--1{
-            background-image: linear-gradient(
-                to bottom, 
-                rgba($color-two, 0.5), 
-                rgba($color-two, 1)),             
-                url(../img/pottery.jpg);
+            @include classBG-1;
             background-position: 55% center;
         }
         &--2{
-            background-image: linear-gradient(
-                to bottom, 
-                rgba($color-three, 0.5), 
-                rgba($color-three, 1)),       
-                url(../img/drawing2.jpg);
+            @include classBG-2;
             background-position: 65% center;
         }
         &--3{
-            background-image: linear-gradient(
-                to bottom, 
-                rgba($color-four, 0.5), 
-                rgba($color-four, 1)), 
-                url(../img/sewing.jpg);
+            @include classBG-3;
             background-position: 18% center;
         }
         &--4{
-            background-image: linear-gradient(
-                to bottom, 
-                rgba($color-five, 0.5), 
-                rgba($color-five, 1)), 
-                url(../img/flower.jpg);
+            @include classBG-4;
             background-position: center;
         }
         &--5{
-            background-image: 
-            linear-gradient(
-                to bottom, 
-                rgba($color-one, 0.7), 
-                rgba($color-one, 1)), 
-                url(../img/crea.jpg);
+            @include classBG-5;
             background-position: center;
         }
 
@@ -134,21 +246,6 @@
 
 //JS CLASSES
 
-.extend{
-    width: 100%;   
-    //z-index: 10;
-    position: absolute;
-    top:0;
-    left: 0;
-    transition: left .5s ease-out;
-}
-
-.position{
-    position: absolute;
-    top: 0;
-    left:0;
-    transition: left .5s ease-out;
-}
 
 .none{
   opacity: 0;
@@ -156,22 +253,19 @@
   transition: all .3s ease-out;
 }
 
-.width{
-    width: calc(100% / 5);
-}
 
-.slideSideR {       
-    padding: 4rem;
-    position: absolute;
-    top: 8rem; right: 8rem; 
-    transition: all .5s ease-out, visibility 0s .2s;
-    transform: translateX(200%);
+.classBG-js-1{
+    @include classBG-1;
 }
-
-.slideSideL {       
-    padding: 4rem;
-    position: absolute;
-    top: 0; left: 0; 
-    transition: all .5s ease-out, visibility 0s .2s;
-    transform: translateX(-100%);
+.classBG-js-2{
+    @include classBG-2;
+}
+.classBG-js-3{
+    @include classBG-3;
+}
+.classBG-js-4{
+    @include classBG-4;
+}
+.classBG-js-5{
+    @include classBG-5;
 }

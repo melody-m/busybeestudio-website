@@ -2,79 +2,94 @@
 console.log('start');
 
 
-
-const classesSlider = document.querySelectorAll('.classes__class');
-
 const classGallery = document.querySelector('.classes__gallery');
 
-const slideSideR = document.querySelector('.slideSideR');
-const slideSideL1 = document.querySelector('.slideSideL--1');
-const slideSideL2 = document.querySelector('.slideSideL--2');
-const slideSideL3 = document.querySelector('.slideSideL--3');
-const slideSideL4 = document.querySelector('.slideSideL--4');
-const slideSideL5 = document.querySelector('.slideSideL--5');
+const classesBtn = document.querySelectorAll('.classes__subtitle');
+const classesBtnArr = Array.from(classesBtn);
 
+const classesSlider = document.querySelectorAll('.classes__class');
 const classesSliderArr = Array.from(classesSlider);
 
+const slideSideR = document.querySelector('.classes__slideR');
+
+
+const closeBtn = document.querySelectorAll('.classes__content--close');
+const closeBtnArr = Array.from(closeBtn);
+
+let bg;
 
 function slideExtend() {
-    classesSliderArr.forEach((cur) => {
+    classesBtnArr.forEach((cur) => {
 
-        cur.addEventListener('click', (e) => {
-            console.log(e.target);
+        cur.addEventListener('click', (e) => {            
+            
+            const fullID = e.target.id;
+            const splitID = fullID.split('-');
+            const ID = splitID[1];
+                      
+            
+            //Change BG image to the course selected
 
-            if (e.target.classList.contains('classes__class--1')){
-                classGallery.classList.add('classes__class--1');
-            } else if(e.target.classList.contains('classes__class--2')){
-                classGallery.classList.add('classes__class--2');
-            } else if(e.target.classList.contains('classes__class--3')){
-                classGallery.classList.add('classes__class--3');
-            } else if(e.target.classList.contains('classes__class--4')){
-                classGallery.classList.add('classes__class--4');
-            } else if(e.target.classList.contains('classes__class--5')){
-                classGallery.classList.add('classes__class--5');
-            }
+            const galClasses = listClasses();
+                        
+            if (galClasses[galClasses.length]){
 
+                //console.log(typeof (galClasses.length -1));
+                classGallery.classList.remove(`${galClasses[galClasses.length]}`);
+            };
+
+            //galClasses.length -1
+            
+
+            classGallery.classList.add(`classBG-js-${ID}`);
+            
+            // Fades off the courses images
             classesSliderArr.forEach((cur) => {
                 cur.classList.add('none');
-                // if(cur != e.target){
-                //     cur.classList.add('none');             
-                // }
-                
-                cur.addEventListener('transitionend', () => {
-                    if (cur.classList.contains('none')){
-                        cur.style.display = 'none';
-                    }
-
-                    if (e.target.classList.contains('classes__class--1')){
-                        slideSideL1.style.transform = 'translateX(0%)';
-
-                    } else if(e.target.classList.contains('classes__class--2')){
-                        slideSideL2.style.transform = 'translateX(0%)';
-
-                    } else if(e.target.classList.contains('classes__class--3')){
-                        slideSideL3.style.transform = 'translateX(0%)';
-
-                    } else if(e.target.classList.contains('classes__class--4')){
-                        slideSideL4.style.transform = 'translateX(0%)';
-
-                    } else if(e.target.classList.contains('classes__class--5')){
-                        slideSideL5.style.transform = 'translateX(0%)';
-                    }
-
-                    slideSideR.style.transform = 'translateX(0%)';
-                    
-                    
-
-                })
             })            
+
+            //Sliders come in
+            document.querySelector(`.classes__slideL--${ID}`).style.transform = 'translateX(0%)';
+            document.querySelector(`.classes__slideR--${ID}`).style.transform = 'translateX(0%)';
+           
         })     
 
     })    
 }
 
+function listClasses(){
+    let classList = classGallery.classList;
+    let classListArr =  Array.from(classList);
+    return classListArr;
+}
+
+function closeClass() {
+    closeBtnArr.forEach((cur) => {
+
+        cur.addEventListener('click', (e) => {
+           
+
+            const closeFullID = e.target.id;
+            const splitCloseID = closeFullID.split('-');
+            const closeID = splitCloseID[1];
+
+            document.querySelector(`.classes__slideL--${closeID}`).style.transform = 'translateX(-100%)';
+            document.querySelector(`.classes__slideR--${closeID}`).style.transform = 'translateX(200%)';
+            
+
+            classesSliderArr.forEach((cur) => {
+                cur.style.display = 'block';
+                cur.classList.remove('none');
+            });
+
+        })
+    })
+}
+
+
 
 slideExtend();
+closeClass();
 
 
 

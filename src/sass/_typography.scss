@@ -13,6 +13,7 @@
 body{
     font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     color: $color-grey-dark;
 }
 h1{
@@ -67,6 +68,25 @@ h4{
             letter-spacing: .1rem;
         }
 
+    }
+
+    &__content{
+        &--title{
+            @include oldFont;
+            text-align: center;
+            font-size: 2rem;
+        }
+        &--text{
+            text-align: justify;
+            font-size: 1.5rem;
+            
+        }
+        &--btn{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: white;
+            text-transform: uppercase;
+        }
     }
 }
 
