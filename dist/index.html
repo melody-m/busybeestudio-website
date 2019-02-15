@@ -13,10 +13,47 @@
 <body>
     <header class = "landpage">
         <div class="header__logo"></div>
-        <h1 class="header__title">Let's create...</h1>
+        <h1 class="header__title">Let's create!</h1>
+
+        <div class="navigation">
+
+                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">&nbsp;</span>
+                </label>
+    
+            <div class="navigation__background">    
+                <nav class="navigation__nav ">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <div class="navigation__number">01 /</div>
+                            <a href="#home" class="navigation__link">Home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <div class="navigation__number">02 /</div>
+                            <a href="#classes" class="navigation__link">Our Classes</a></li>
+                        <li class="navigation__item">
+                            <div class="navigation__number">03 /</div>
+                            <a href="#studio" class="navigation__link">Our Studio</a></li>
+                        <li class="navigation__item">
+                            <div class="navigation__number">04 /</div>
+                            <a href="#team" class="navigation__link">Our Team</a></li>
+                        <li class="navigation__item">
+                            <div class="navigation__number">05 /</div>
+                            <a href="#gallery" class="navigation__link">Gallery</a></li>
+                        <li class="navigation__item">                            
+                            <div class="navigation__number">06 /</div>                            
+                            <a href="#contact" class="navigation__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </div>
+
+
     </header>
 
-    <div class="welcome">
+    <div class="welcome" id="home">
         <div class="row clearfix">
 
             <div class="col-1-of-3">
@@ -44,7 +81,7 @@
 
 
 
-    <section class="classes">
+    <section class="classes" id="classes">
         <div class="title">
             <div class="classes__01 scribble"></div>
             <h2 class="classes__h2">Our Classes</h2>
@@ -293,24 +330,26 @@
                 <div class="classes__details--sub"><h3>&ndash; Details &ndash;</h3></div>
 
                 <div class="col-1-of-3">
-                    <!-- <div class="classes__details--sub"><h3>&ndash; Details &ndash;</h3></div> -->
-
+                    <div class="classes__icon classes__icon--1"></div>                        
                     <h4 class="margin-bottom-small">For everyone</h4>
                     <p class="classes__text">Everyone is welcome, no matter your abilities we’ll make sure you have a good experience and go home 
                         with something you’ve created all by yourself.
                     </p>
                 </div>
+
                 <div class="col-1-of-3">
+                    <div class="classes__icon classes__icon--2"></div>
                     <h4 class="margin-bottom-small">Super flexible</h4>
-                    <p class="classes__text">So this week you have the dance show of the little one and can’t attend a class ? 
+                    <p class="classes__text">So this week you have a meeting and can’t attend a class ? 
                         No problem at all, we know how life is, that’s why all our classes are priced individually. 
                         We also offer a card for 6 classes, to use on any of them, without any limit of time!                        
                     </p>
                 </div>
                 <div class="col-1-of-3">
+                    <div class="classes__icon classes__icon--3"></div>
                     <h4 class="margin-bottom-small">Materials ?</h4>
                     <p class="classes__text">You don’t have to worry about any material, 
-                        everything is provided for our classes so that you can just fsit back, 
+                        everything is provided for our classes so that you can just sit back, 
                         relax, and focus on your masterpiece.
                     </p>
                 </div>
@@ -319,7 +358,7 @@
 
     </section>
 
-    <section class="studio">
+    <section class="studio" id="studio">
 
             <div class="title">
                 <div class="studio__02 scribble"></div>
@@ -354,7 +393,7 @@
     </section>
 
 
-    <section class="team">
+    <section class="team" id="team">
         <div class="title">
             <div class="team__03 scribble"></div>
             <h2 class="margin-bottom-big">Our Team</h2>
@@ -452,12 +491,16 @@
                 <div class="row clearfix">
                     
                     <div class="team__testimonials--sub"><h3>&ndash; Testimonials &ndash;</h3></div>
+
+                    <div class="col-1-of-4">
+                            <div class="team__icon team__icon--1"></div>
+                    </div>
     
                     <div class="col-1-of-4 team__testimonials--id">
                         <div class="team__testimonials--name">Tom</div>
                         <div class="team__testimonials--rate">Has been coming for 2 years</div>
                     </div>
-                    <div class="col-3-of-4 team__testimonials--quote">
+                    <div class="col-2-of-4 team__testimonials--quote">
                         <div class="team__quote team__quote--1"></div>
                         Always have a fantastic time with Terry, who talks us through the technics he will demonstrate and after some practice, 
                         on to make a new item. Leaving feeling very inspired, happy and ready for more. Just give it a go!!
@@ -468,12 +511,17 @@
                 <div class="row clearfix">
                     
                         <div class="team__testimonials--sub"><h3>&ndash; Testimonials &ndash;</h3></div>
+
+                        <div class="col-1-of-4">
+                            <div class="team__icon team__icon--2"></div>
+                        </div>
       
                         <div class="col-1-of-4 team__testimonials--id">
+
                             <div class="team__testimonials--name">Emma</div>
                             <div class="team__testimonials--rate">Has been coming for 1 year</div>
                         </div>
-                        <div class="col-3-of-4 team__testimonials--quote">
+                        <div class="col-2-of-4 team__testimonials--quote">
                             <div class="team__quote team__quote--2"></div>
                             Professional, relaxed and fun! I was soon put at ease by the lovely workshop leader Lucy. 
                             The demonstration are very helpful, and there is a great variety of flower, greens and materials to use to create a unique flower arrangement. 
@@ -485,7 +533,7 @@
 
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="title">
             <div class="gallery__04 scribble"></div>
             <h2 class="margin-bottom-big">Gallery</h2>
@@ -559,7 +607,7 @@
 
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
 
         <div class="title">
             <div class="contact__05 scribble"></div>
@@ -634,7 +682,11 @@
             </div>
         </div>
         <div class="footer__copyright">© Copyright 2019 All rights reserved. Company Registration No: 0000000000 | VAT No: GB 000 000 000 | Registered in England.</div>
-
+        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
     </footer>
 
     <script src="js/index.js"></script>

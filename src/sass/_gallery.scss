@@ -65,6 +65,7 @@
         width: 100vw;
         height: 100vh;
         visibility: hidden;
+        z-index: 1500;
     }
 
     &__fullImg{
@@ -75,6 +76,7 @@
         margin: 0 auto;
         text-align: center;
         color: white;
+        z-index: 2000;
 
     }
 

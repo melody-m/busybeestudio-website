@@ -218,7 +218,7 @@
 
   
     &__details {
-        padding: 6rem 0;
+        padding: 4rem 0;
         background-color: $color-four;
         position: relative;
         border-top: 3px dotted $color-grey-light;
@@ -230,6 +230,18 @@
             left: 4rem;
             transform: translate(-50%, -50%);
         }
+    }
+    &__icon{
+        margin: 0 auto;
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 3rem;
+        background-size: cover;
+        background-position: center;
+
+        &--1{background-image: url(/img/teamwork.svg);}
+        &--2{background-image: url(/img/test.svg);}
+        &--3{background-image: url(/img/tools.svg);}
     }
 
     &__text{

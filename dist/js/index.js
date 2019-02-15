@@ -1,7 +1,3 @@
-
-console.log('start');
-
-
 const classesDOM = {
     classGallery : document.querySelector('.classes__gallery'),
     classesBtn : document.querySelectorAll('.classes__subtitle'),
@@ -10,27 +6,23 @@ const classesDOM = {
     closeBtn : document.querySelectorAll('.classes__content--close'),
 }
 
-//const classGallery = document.querySelector('.classes__gallery');
+const galleryDOM = {
+    photoGallery : document.querySelectorAll('.gallery__photo'),
+    fullScreen : document.querySelector('.gallery__fullScreen'),
+    fullImg : document.querySelector('.gallery__fullImg'),
+    closeBtn : document.querySelector('.gallery__close'),
+    allImg : document.querySelectorAll('.gallery__photo') ,
+    imgIdArr :[],
+    arrL : document.querySelector('.gallery__arrow--L'),
+    arrR : document.querySelector('.gallery__arrow--R'),
+}
 
-//const classesBtn = document.querySelectorAll('.classes__subtitle');
+
 const classesBtnArr = Array.from(classesDOM.classesBtn);
-
-//const classesSlider = document.querySelectorAll('.classes__class');
 const classesSliderArr = Array.from(classesDOM.classesSlider);
-
-//const slideSideR = document.querySelector('.classes__slideR');
-
-
-//const closeBtn = document.querySelectorAll('.classes__content--close');
 const closeBtnArr = Array.from(classesDOM.closeBtn);
 
-let bg;
-
-
-
-
-const photoGallery = document.querySelectorAll('.gallery__photo');
-const photoGalleryArr = Array.from(photoGallery);
+const photoGalleryArr = Array.from(galleryDOM.photoGallery);
 
 
 function getID(e){
@@ -41,8 +33,7 @@ function getID(e){
     return ID;
 }
 
-
-////////////////////DECLARATION/////////////
+/***************************************************COURSES*********************************************************/
 
 function courseExtend(ID) {
     
@@ -73,43 +64,19 @@ function listClasses(){
     return classListArr;
 }
 
-function closeClass() {
-    closeBtnArr.forEach((cur) => {
+function courseClose(ID) {
 
-        cur.addEventListener('click', (e) => {
-           
+    document.querySelector(`.classes__slideL--${ID}`).style.transform = 'translateX(-100%)';
+    document.querySelector(`.classes__slideR--${ID}`).style.transform = 'translateX(200%)';            
 
-            const closeFullID = e.target.id;
-            const splitCloseID = closeFullID.split('-');
-            const closeID = splitCloseID[1];
-
-            document.querySelector(`.classes__slideL--${closeID}`).style.transform = 'translateX(-100%)';
-            document.querySelector(`.classes__slideR--${closeID}`).style.transform = 'translateX(200%)';
-            
-
-            classesSliderArr.forEach((cur) => {
-                cur.style.display = 'block';
-                cur.classList.remove('none');
-            });
-
-        })
-    })
+    classesSliderArr.forEach((cur) => {
+        cur.classList.remove('none');  
+    })   
 }
 
 
 
 /***************************************************GALLERY*********************************************************/
-
-
-const galleryDOM = {
-    fullScreen : document.querySelector('.gallery__fullScreen'),
-    fullImg : document.querySelector('.gallery__fullImg'),
-    closeBtn : document.querySelector('.gallery__close'),
-    allImg : document.querySelectorAll('.gallery__photo') ,
-    imgIdArr :[],
-    arrL : document.querySelector('.gallery__arrow--L'),
-    arrR : document.querySelector('.gallery__arrow--R'),
-}
 
 function getImgID(){
     const fullImg = document.querySelector('.gallery__img');
@@ -176,26 +143,30 @@ function previousPhoto(){
     }
 }
 
-
-
-
-//EVENT LISTENERS
+/***************************************************EVENT_LISTENERS*********************************************************/
 
 function setEventListeners(){
 
     //Course listeners
+    
+    classesBtnArr.forEach((cur) => {
+        cur.addEventListener('click', (e) => {                          
+            const ID = getID(e); 
+            courseExtend(ID);                                          
+        })  
+    })
 
-    cur.addEventListener('click', (e) => {           
-            
-        const ID = getID(e); 
-        courseExtend(ID);                                          
-    })   
+    closeBtnArr.forEach((cur) => {
+        cur.addEventListener('click', (e) => {           
+            const closeID = getID(e);
+            courseClose(closeID);
+        })
+    })
 
     //Gallery listeners
 
     photoGalleryArr.forEach((cur) => {
-        cur.addEventListener('click', (e) => {        
-            
+        cur.addEventListener('click', (e) => {                  
             const photoID = getID(e);
             photoFullScreen(photoID);                        
         })
@@ -211,8 +182,6 @@ function init(){
     setEventListeners();
 }
 
-
-closeClass();
 init();
 
 

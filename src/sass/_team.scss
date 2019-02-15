@@ -41,7 +41,7 @@
         position: relative;
         border-top: 3px dotted $color-grey-light;
         border-bottom: 3px dotted $color-grey-light;
-
+      
 
         &--sub{
             position: absolute;
@@ -53,6 +53,18 @@
         &--quote{
             position: relative;
         }
+    }
+
+    &__icon{
+        
+        margin: 0 auto;
+        width: 8rem;
+        height: 8rem;        
+        background-size: cover;
+        background-position: center;
+
+        &--1{background-image: url(/img/man.svg);}
+        &--2{background-image: url(/img/girl.svg);}
     }
 
     &__quote{
