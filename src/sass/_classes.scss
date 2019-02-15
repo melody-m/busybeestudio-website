@@ -130,18 +130,16 @@
 
         }
         &--btn{
-            border: none;
+            
             background-color: $color-two-dark;
             padding: 1rem;
-            float: right;
-            cursor: pointer;            
+            float: right;                      
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
             transition: all .3s;
 
             &:hover{
                 transform: scale(1.1);
-                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
-                
+                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);                
             }
         }
 
@@ -150,10 +148,6 @@
             margin-right: 2rem;
             color: white;
             float: right;
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-            outline: none;
         }
     }
 
