@@ -5,16 +5,22 @@
 
     &__04{
         background-image: url(../img/04.png);
+        @include background;
         top: -5.5rem;
         left: -4.5rem;
+    }
+
+    &__photoContainer{
+        @include respond(tab-port) {            
+            width: 50%;
+            margin: 2rem auto;
+        }
     }
     
     &__photo{
         width: 100%;
         height: 25rem;
-        background-color: bisque;
-        background-position: center;
-        background-size: cover;
+        @include background;
         cursor: pointer;
         transition: all .3s;
 
@@ -58,21 +64,14 @@
         }
     }   
     &__fullScreen{
-        background-color: rgba(0,0,0,.7);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        @include fullScreenBox;
         visibility: hidden;
-        z-index: 1500;
     }
 
     &__fullImg{
         
         width: 80%;
-        // background-color: aquamarine;
-        padding: 1rem 0;
+        padding: 4rem 0;
         margin: 0 auto;
         text-align: center;
         color: white;

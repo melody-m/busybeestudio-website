@@ -106,6 +106,16 @@ h4{
     }
 }
 
+.booking{
+    &__places {
+        font-size: 1.2rem;
+    }
+    &__btn{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
+
 
 .team__testimonials{
     &--id{
@@ -151,6 +161,11 @@ h4{
         line-height: 2rem;
     }
 
+    &__btn{
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
 }
 
 .footer{
@@ -160,8 +175,12 @@ h4{
         text-align: center;
     }
 
-    &__com{
+    &__subtitle{
         @include oldFont;        
+    }
+
+    &__link{
+        font-size: 1.4rem;
     }
 }
 

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Busy Bee Studio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Fredericka+the+Great|Open+Sans:300,400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <title>Busy Bee Studio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Fredericka+the+Great|Open+Sans:300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+    </head>
 
 <body>
     <header class = "landpage">
-        <div class="header__logo"></div>
-        <h1 class="header__title">Let's create!</h1>
+        <img src="img/logo.svg" alt="Busy Bee Studio logo" class="header__logo">        
+        <div class="header__title">
+            <h1>Let's create!</h1>
+            <div class="header__subtitle">Discover our favourite craft classes, courses and workshops.</div>
+        </div>
+               
 
         <div class="navigation">
 
@@ -91,20 +96,20 @@
 
             <!-- CLASSES SLIDER IMAGE -->
             
-                <div class="classes__class classes__class--1" >
-                    <div class="classes__subtitle classes__subtitle--1" id ="class-1">Pottery</div>
+                <div class="classes__class classes__class--1"  id ="class-1" >
+                    <div class="classes__subtitle classes__subtitle--1">Pottery</div>
                 </div>
-                <div class="classes__class classes__class--2" >
-                    <div class="classes__subtitle classes__subtitle--2" id ="class-2">Drawing Painting</div>
+                <div class="classes__class classes__class--2" id ="class-2" >
+                    <div class="classes__subtitle classes__subtitle--2">Drawing Painting</div>
                 </div>
-                <div class="classes__class classes__class--3" >
-                    <div class="classes__subtitle classes__subtitle--3" id ="class-3">Sewing</div>
+                <div class="classes__class classes__class--3" id ="class-3" >
+                    <div class="classes__subtitle classes__subtitle--3">Sewing</div>
                 </div>
-                <div class="classes__class classes__class--4" >
-                    <div class="classes__subtitle classes__subtitle--4" id ="class-4">Flower Arrangements</div>
+                <div class="classes__class classes__class--4" id ="class-4" >
+                    <div class="classes__subtitle classes__subtitle--4">Flower Arrangements</div>
                 </div>
-                <div class="classes__class classes__class--5" >
-                    <div class="classes__subtitle classes__subtitle--5" id ="class-5">Creativity</div>
+                <div class="classes__class classes__class--5" id ="class-5" >
+                    <div class="classes__subtitle classes__subtitle--5">Creativity</div>
                 </div>
 
                 <!-- CLASSES RIGHT SIDE BARS CONTENT -->
@@ -112,13 +117,13 @@
                 <div class="classes__info classes__slideL classes__slideL--1">
                     <div class="classes__info--title margin-bottom-small">Pottery</div>
                     <div class="classes__info--subtitle margin-bottom-tiny">Classes :</div>
-                    <div class="classes__info--text margin-bottom-small">Mon : 6pm - 7PM
-                        <br> Thurs : 7pm - 8pm
-                        <br> Sat : 1pm - 2pm
+                    <div class="classes__info--text margin-bottom-small">Mon : 6pm - 8PM
+                        <br> Thurs : 7pm - 9pm
+                        <br> Sat : 1pm - 3pm
                     </div>
                     <div class="classes__info--subtitle margin-bottom-tiny">Fees :</div>
-                    <div class="classes__info--text"> £12 per class
-                        <br> £60 for 6 classes (any of them)
+                    <div class="classes__info--text"> £30 per class
+                        <br> £150 for 6 classes (any of them)
                     </div>
                 </div>
 
@@ -203,7 +208,7 @@
                                 <div class="classes__content--img classes__content--img-2"></div>
                                 <div class="classes__content--img classes__content--img-3"></div>
                             </div>
-                            <button class="classes__content--btn btn">Book a class &rarr;	</button>
+                            <button class="classes__content--btn btn" id="book-1">Book a class &rarr;	</button>
                         </div>
 
                         
@@ -230,7 +235,7 @@
                                 <div class="classes__content--img classes__content--img-5"></div>
                                 <div class="classes__content--img classes__content--img-6"></div>
                             </div>
-                            <button class="classes__content--btn btn">Book a class &rarr;	</button>
+                            <button class="classes__content--btn btn" id="book-2">Book a class &rarr;	</button>
                         </div>
 
                         
@@ -258,7 +263,7 @@
                                 <div class="classes__content--img classes__content--img-8"></div>
                                 <div class="classes__content--img classes__content--img-9"></div>
                             </div>
-                            <button class="classes__content--btn btn">Book a class &rarr;	</button>
+                            <button class="classes__content--btn btn " id="book-3">Book a class &rarr;	</button>
                         </div>
 
                         
@@ -284,7 +289,7 @@
                                 <div class="classes__content--img classes__content--img-11"></div>
                                 <div class="classes__content--img classes__content--img-12"></div>
                             </div>
-                            <button class="classes__content--btn btn">Book a class &rarr; </button>
+                            <button class="classes__content--btn btn" id="book-4">Book a class &rarr; </button>
                         </div>
 
                         
@@ -311,7 +316,7 @@
                                 <div class="classes__content--img classes__content--img-14"></div>
                                 <div class="classes__content--img classes__content--img-15"></div>
                             </div>
-                            <button class="classes__content--btn btn">Book a class &rarr; </button>
+                            <button class="classes__content--btn btn" id="book-5">Book a class &rarr; </button>
                         </div>
 
                         
@@ -320,8 +325,32 @@
 
         </div>      
 
+        <div class="classes__booking">
 
+            <div class="booking__container" id="booking-dates">
+                <button class="booking__close btn">&times;</button>
+                <h4 class="margin-bottom-medium">Select a class time</h3>
+                    <div class="booking__dates">
 
+                        <!-- <ul class ="booking__list"></ul> -->
+                    </div>                                
+            </div>
+
+            <div class="booking__form">                     
+                
+                <div class="booking__container" id="booking-form">
+                    <label class="booking__label" for="name">Name:</label>
+                    <input type="text" id="name" class="booking__field" name="user_name" placeholder="Your Name">
+                </div>
+                <div class="contact__box">
+                    <label class="booking__label" for="mail">E-mail:</label>
+                    <input type="email" id="mail" class="booking__field" name="user_mail" placeholder="Your email">
+                </div>
+                
+            </div>
+        </div>
+
+       
 
         <div class="classes__details">
 
@@ -401,7 +430,7 @@
 
         <div class="row clearfix margin-bottom-small">
             <div class="col-1-of-3">
-                <div class="team__container">
+                <div class="team__container clearfix">
                     <div class="team__photo team__photo--1"></div>
                     <div class="team__desc slide">
                         <div class="team__desc--name">Mary Smith</div>
@@ -419,8 +448,7 @@
                     <div class="team__photo team__photo--2"></div>
                     <div class="team__desc slide">
                         <div class="team__desc--name">Terry Brown</div>
-                        <div class="team__desc--exp">Terry is our fantastic potter; he started a Pottery/Ceramic Course when he was 16
-                            and quickly realized that he had a natural aptitude for this artistic medium. Over the years, he has developed various 
+                        <div class="team__desc--exp">Terry started a Pottery/Ceramic Course when he was 16. Over the years, he has developed various 
                             pottery techniques and specialised in ‘wheel work’. He has a real passion for it and loves sharing his knowledge 
                             with his students. 
                             
@@ -488,48 +516,48 @@
 
         <div class="team__testimonials">
 
-                <div class="row clearfix">
-                    
-                    <div class="team__testimonials--sub"><h3>&ndash; Testimonials &ndash;</h3></div>
-
-                    <div class="col-1-of-4">
-                            <div class="team__icon team__icon--1"></div>
-                    </div>
-    
-                    <div class="col-1-of-4 team__testimonials--id">
-                        <div class="team__testimonials--name">Tom</div>
-                        <div class="team__testimonials--rate">Has been coming for 2 years</div>
-                    </div>
-                    <div class="col-2-of-4 team__testimonials--quote">
-                        <div class="team__quote team__quote--1"></div>
-                        Always have a fantastic time with Terry, who talks us through the technics he will demonstrate and after some practice, 
-                        on to make a new item. Leaving feeling very inspired, happy and ready for more. Just give it a go!!
-                    </div>
-                    
-                </div>
-
-                <div class="row clearfix">
-                    
-                        <div class="team__testimonials--sub"><h3>&ndash; Testimonials &ndash;</h3></div>
-
-                        <div class="col-1-of-4">
-                            <div class="team__icon team__icon--2"></div>
+            <div class="row clearfix">
+                
+                <div class="team__testimonials--sub"><h3>&ndash; Testimonials &ndash;</h3></div>
+                <div class="team__testimonialsBox clearfix">
+                        <div class="col-1-of-6">
+                                <div class="team__icon team__icon--1"></div>
                         </div>
-      
+        
                         <div class="col-1-of-4 team__testimonials--id">
-
-                            <div class="team__testimonials--name">Emma</div>
-                            <div class="team__testimonials--rate">Has been coming for 1 year</div>
+                            <div class="team__testimonials--name">Tom</div>
+                            <div class="team__testimonials--rate">Has been coming for 2 years</div>
                         </div>
                         <div class="col-2-of-4 team__testimonials--quote">
-                            <div class="team__quote team__quote--2"></div>
-                            Professional, relaxed and fun! I was soon put at ease by the lovely workshop leader Lucy. 
-                            The demonstration are very helpful, and there is a great variety of flower, greens and materials to use to create a unique flower arrangement. 
-                            So pleased with the result every time!
+                            <div class="team__quote team__quote--1"></div>
+                            Always have a fantastic time with Terry, who talks us through the technics he will demonstrate and after some practice, 
+                            on to make a new item. Leaving feeling very inspired, happy and ready for more. Just give it a go!!
                         </div>
-                        
-                    </div>
+                </div>
+                
+                
             </div>
+            <div class="row clearfix">
+                
+                <div class="team__testimonials--sub"><h3>&ndash; Testimonials &ndash;</h3></div>
+                <div class="team__testimonialsBox clearfix">
+                    <div class="col-1-of-6">
+                        <div class="team__icon team__icon--2"></div>
+                    </div>
+                
+                    <div class="col-1-of-4 team__testimonials--id">
+                        <div class="team__testimonials--name">Emma</div>
+                        <div class="team__testimonials--rate">Has been coming for 1 year</div>
+                    </div>
+                    <div class="col-2-of-4 team__testimonials--quote">
+                        <div class="team__quote team__quote--2"></div>
+                        Professional, relaxed and fun! I was soon put at ease by the lovely workshop leader Lucy. 
+                        The demonstration are very helpful, and there is a great variety of flower, greens and materials to use to create a unique flower arrangement. 
+                        So pleased with the result every time!
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -596,10 +624,10 @@
         </div>
 
         <div class="gallery__fullScreen">
-            <button class="gallery__close btn">&times;</button>
+            <button class="gallery__close btn">&times;</button>           
             <div class="gallery__fullImg">     
                 <!-- figure added by js-->
-            </div>
+            </div>            
             <div class="gallery__arrow gallery__arrow--L"><button class="gallery__arrow--btn btn">&larr;</button></div>
             <div class="gallery__arrow gallery__arrow--R"><button class="gallery__arrow--btn btn">&rarr;</button></div>
         </div>
@@ -643,18 +671,20 @@
             <div class="col-1-of-2">
                 <div class="contact__form">
                     <form action="/my-handling-form-page" method="post">
-                        <div>
+                        <div class="contact__box">
                             <label class="contact__label" for="name">Name:</label>
                             <input type="text" id="name" class="contact__field" name="user_name" placeholder="Your Name">
                         </div>
-                        <div>
+                        <div class="contact__box">
                             <label class="contact__label" for="mail">E-mail:</label>
                             <input type="email" id="mail" class="contact__field" name="user_mail" placeholder="Your email">
                         </div>
-                        <div>
+                        <div class="contact__box">
                             <textarea id="msg" class="contact__field contact__field--msg" name="user_message" placeholder="Drop us a line!"></textarea>
                             <label class="contact__label" for="msg">Message:</label>
                         </div>
+                        
+                        <button class="contact__btn btn">Submit</button>
                     </form>
                 </div>
             </div>
@@ -669,24 +699,27 @@
 
         <div class="footer__container">
             <div class="footer__logo">
-                <div class="footer__logo--img"></div>
+                    <img src="img/logo-white.svg" alt="Busy Bee Studio logo" class="footer__logo--img">
+            </div>
+
+            <div class="footer__thank">
+                <div class="footer__subtitle">
+                    Special thanks to : 
+                </div> 
+                <div class="footer__link">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             </div>
 
             <div class="footer__com">
-                <div class="footer__catch">Follow us!</div> 
+                <div class="footer__subtitle">Follow us!</div> 
                 <div class="footer__social">
-                    <div class="footer__follow footer__follow--1"></div>
-                    <div class="footer__follow footer__follow--2"></div>
-                    <div class="footer__follow footer__follow--3"></div>
+                    <button class ="btn"><img src="img/fb-logo.png" alt="facebook"class="footer__follow"></button>
+                    <button class ="btn"><img src="img/inst-logo.png" alt="facebook"class="footer__follow"></button>
+                    <button class ="btn"><img src="img/twitter-logo.png" alt="facebook"class="footer__follow"></button>
+
                 </div>
             </div>
         </div>
         <div class="footer__copyright">© Copyright 2019 All rights reserved. Company Registration No: 0000000000 | VAT No: GB 000 000 000 | Registered in England.</div>
-        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-        <!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
     </footer>
 
     <script src="js/index.js"></script>

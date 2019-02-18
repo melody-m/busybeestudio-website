@@ -4,6 +4,7 @@
 
     &__03{
         background-image: url(../img/03.png);
+        @include background;
         top: -5.5rem;
         left: -4.5rem;
     }
@@ -11,19 +12,59 @@
     &__container{
         position: relative;
         overflow: hidden;
+        &:hover {
+            & .slide { 
+                transform: translateY(0%);                
+                transition: all .4s ease-out;
+            }
+
+            & .team__photo{
+                transform: scale(1.1);
+                transition: all .2s ease-out;
+
+                @include respond(tab-port) {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        @include respond(tab-port) {
+            margin: 0 auto;
+            text-align: center; 
+        }
+
+        @include respond(phone) {
+            width: 65%;           
+           
+        }
     }
 
     &__desc{
         text-align: center;
+        @include respond(tab-port) {
+            width: 40%;
+        }
         
     }
 
     &__photo{
         width: 100%;
         height: 35rem;
-        background-color: aquamarine;
-        background-position: center;
-        background-size: cover;
+        @include background;
+
+        @include respond(tab-port) {
+            width: 40%;            
+            float: left;
+        }
+
+        @include respond(phone) {
+            width: 12rem;
+            height: 12rem;   
+            border-radius: 50%;
+            float: none;
+            margin: 0 auto;        
+            
+        }
 
 
         &--1{background-image: url(../img/team01.jpg);}
@@ -53,6 +94,12 @@
         &--quote{
             position: relative;
         }
+
+        &--id{
+            @include respond(phone) {
+                transform: translateY(-2rem);
+            }
+        }
     }
 
     &__icon{
@@ -60,21 +107,29 @@
         margin: 0 auto;
         width: 8rem;
         height: 8rem;        
-        background-size: cover;
-        background-position: center;
+        @include background;
 
         &--1{background-image: url(/img/man.svg);}
         &--2{background-image: url(/img/girl.svg);}
+
+        @include respond(phone) {            
+            width: 12rem;
+            height: 12rem;            
+        }
     }
 
     &__quote{
         width: 8rem;
         height: 8rem;
         background-image: url(../img/quote.png);
+        @include background;
         position: absolute;
         &--1{
             top:-5rem;
             left:-9rem;
+            @include respond(phone) {            
+                top:-15rem;    
+            }
         }
         &--2{
             bottom: -5rem;
@@ -84,20 +139,13 @@
         }
     }
 
-    &__container{
+}
 
-        &:hover {
-            & .slide { 
-                transform: translateY(0%);                
-                transition: all .4s ease-out;
-            }
-
-            & .team__photo{
-                transform: scale(1.1);
-
-                transition: all .2s ease-out;
-            }
-          }
+.team__testimonialsBox{
+    @include respond(phone) {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
     }
 }
 
@@ -111,4 +159,21 @@
     top: 0; right: 0; bottom: 0; left: 0;
     transition: all .2s ease-in-out, visibility 0s .2s;
     transform: translateY(100%);
+
+    @include respond(tab-port) {
+        position: relative;         
+        float: right;       
+        width: 60%;
+        height: 35rem;
+        transform: translateY(0%);
+    }
+
+    @include respond(phone) {
+        padding: 2rem;    
+        width: 100%; 
+        max-height: 28rem;  
+        background-image: none;
+                  
+        
+    }
 }

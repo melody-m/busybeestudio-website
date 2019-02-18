@@ -1,11 +1,12 @@
 .landpage{
-    background-image: url(../img/landpage.jpg);
-    background-size: cover;
-    background-position: center;
-
-    width: 100vw;
+    
+    //width: 100vw;
     height: 100vh;
     margin: 0 auto;
+
+    background-image: url(../img/landpage.jpg);
+    @include background;
+
 
     position: relative;
 }
@@ -13,23 +14,25 @@
 .header{
 
     &__logo{
-        width: 6rem;
-        height: 6rem;
-        background-color: $color-three;
-
+        width: 15rem;
+        height: 10rem;
         position: absolute;
-        top: 2rem;
-        left: 2rem;
+        top: 3rem;
+        left: 3rem;
     }
 
-    &__title{
-        width: 50rem;
-        color: $color-three-dark;
+    &__title{        
+        color: $color-two-dark;
         position: absolute;
-        bottom: 20%;
-        right: 0;
+        bottom: 30%;
+        right: 10%;       
+    }
 
-        transform: translate(-50%,-50%);
+    &__subtitle{
+        float: right;
+        color: $color-grey-medium;
+        font-size: 2rem;
+        transform: translateY(-2.5rem);
     }
 }
 
@@ -54,6 +57,7 @@
         background-image: url(../img/W.png);
         top: -3.5rem;
         left: -5.5rem;
+        @include background;
     }
 
     &__welc{
@@ -80,7 +84,7 @@
         position: fixed;
         top: 4rem;
         right: 4rem;
-        z-index:2000;
+        z-index:1000;
         text-align: center;
         cursor: pointer;
 
@@ -93,8 +97,8 @@
         position: fixed;
         top: 0;
         right: 0;
-        background-color: rgba(white, .7);
-        z-index:1000;
+        background-color: rgba(white, .85);
+        z-index:500;
         transform:translateX(100%);
         transition: all .5s ease-out;
     }
@@ -128,7 +132,7 @@
         display: inline-block;
         padding: 1rem 2rem;        
         opacity: 0;
-        color:$color-three-dark;
+        color:$color-two-dark;
         transition: all .4s;
     }
 

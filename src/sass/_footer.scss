@@ -1,42 +1,47 @@
 .footer{
-    background-color: $color-grey-medium;
+    background-color: $color-grey-dark;
     color: white;
     padding: 5rem;
     padding-bottom: 2rem;
     
 
     &__container{
-        // display: flex;
-        // flex-direction: row;
-        
+        position: relative;        
     }
 
     &__logo{
-        width: 80%;
+       
         display: inline-block;
+        margin-right: 5rem;
+        vertical-align: middle;
 
         &--img{
-        width: 8rem;
-        height: 8rem;
-        background-color: aquamarine;        
-        }
-        
+            width: 15rem;
+            height: 10rem;
+        }        
+    }
+    &__thank{
+        width: 60%;
+        display: inline-block;
+        margin-right: 5rem;
+        vertical-align: middle;
     }
 
     &__com{
         display: inline-block;
-        width: 10%;
+        vertical-align: middle;
+        width: 15%;
 
     }
-    &__catch{
+    &__subtitle{
         margin-bottom: 2rem;
     }
 
     &__follow{
         width: 4rem;
         height: 4rem;
-        background-color: beige;
-        display: inline-block;
+        margin-right: 1rem;        
+        display: inline-block;       
        
     }
 

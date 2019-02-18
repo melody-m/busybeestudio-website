@@ -37,10 +37,11 @@
 
 .classes{
 
-    margin-top: 14rem;
+    padding-top: 14rem;
 
     &__01{
         background-image: url(../img/01.png);
+        @include background;
         top: -5.5rem;
         left: -5rem;
         }
@@ -57,9 +58,7 @@
         flex-direction: row;
         flex-wrap: wrap;
 
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        @include background;
 
         overflow: hidden
         
@@ -105,8 +104,7 @@
         &--img{
             width: 32%;
             height: 15rem;
-            background-size: cover;
-            background-position: center;
+            @include background;
             display: inline-block;
             &:not(:last-child) {
                 margin-right:.5rem;
@@ -134,13 +132,7 @@
             background-color: $color-two-dark;
             padding: 1rem;
             float: right;                      
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
             transition: all .3s;
-
-            &:hover{
-                transform: scale(1.1);
-                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);                
-            }
         }
 
         &--close{
@@ -170,8 +162,7 @@
         bottom: 2rem;
         left: 50%;
         transform:translateX(-50%);    
-        text-align: center;   
-        cursor: pointer;
+        text-align: center;          
        
         padding: 1rem;    
         transition: all .5s ease-in-out;        
@@ -185,6 +176,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        cursor: pointer;
         
         
         transition: all .5s ease-out;
@@ -236,8 +228,7 @@
         width: 8rem;
         height: 8rem;
         margin-bottom: 3rem;
-        background-size: cover;
-        background-position: center;
+        @include background;
 
         &--1{background-image: url(/img/teamwork.svg);}
         &--2{background-image: url(/img/test.svg);}
@@ -247,6 +238,76 @@
     &__text{
         text-align: justify;
         padding: 0 2rem;
+
+        @include respond(tab-port) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__booking{
+        @include fullScreenBox;
+        display: none;
+        transition: all .5s;
+    }
+}
+
+.booking{
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 4rem;
+        width: 60%;
+        padding-bottom: 8rem;
+        background-color: white;
+        position: relative;
+    }
+    &__close {
+        font-size: 4rem;        
+        color: $color-grey-light;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;        
+    }
+    &__list{
+        width: 60%;
+        margin: 0 auto;
+        list-style: none;
+    }
+    &__item{ 
+        border-bottom : 1px solid $color-grey-light;
+        padding: 2rem 0;
+        
+    }
+
+    &__day, &__places{
+        
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__btn{         
+
+        background-color: $color-two-dark; 
+        float: right;       
+        color : white ;
+        padding: .8rem 1.5rem;
+        transition: all .3s;
+    }
+    
+    &__day, &__places{
+        margin-right: 2rem;
+    }
+
+    &__places {
+        border: 1px solid $color-grey-medium;
+        color: $color-grey-medium;
+        padding : .5rem;
+    }
+
+    &__form{
+        display: none;
     }
 }
 

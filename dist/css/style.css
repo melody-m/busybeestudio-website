@@ -20,6 +20,21 @@
 html {
   font-size: 62.5%;
   /* =10px on normal browser considering a default of 16px=100% on browsers*/ }
+  @media only screen and (max-width: 93.75em) {
+    html {
+      font-size: 62.5%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -32,6 +47,12 @@ body {
 .row {
   max-width: 120rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 93.75em) {
+    .row {
+      max-width: 100rem; } }
+  @media only screen and (max-width: 75em) {
+    .row {
+      max-width: 75rem; } }
   .row:not(:last-child) {
     margin-bottom: 1.5rem; }
   .row [class^="col-"] {
@@ -39,10 +60,17 @@ body {
     position: relative; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 1.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 1.5rem) / 2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 1.5rem) / 3); }
+    @media only screen and (max-width: 50em) {
+      .row .col-1-of-3 {
+        width: 100%;
+        margin-bottom: 4rem; } }
   .row .col-2-of-3 {
     width: calc(2 * ((100% - 2 * 1.5rem) / 3) + 1.5rem); }
   .row .col-1-of-4 {
@@ -53,17 +81,34 @@ body {
     width: calc(3 * ((100% - 3 * 1.5rem) / 4) + 2 * 1.5rem); }
   .row .col-1-of-5 {
     width: calc((100% - 4 * 1.5rem) / 5); }
+  .row .col-1-of-6 {
+    width: calc((100% - 5 * 1.5rem) / 6); }
 
 .title {
   width: 130rem;
   margin: 0 auto;
   position: relative; }
+  @media only screen and (max-width: 93.75em) {
+    .title {
+      max-width: 100rem; } }
+  @media only screen and (max-width: 75em) {
+    .title {
+      max-width: 75rem; } }
+  @media only screen and (max-width: 50em) {
+    .title {
+      max-width: 70rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .title {
+      max-width: 60rem; } }
 
 .btn {
   cursor: pointer;
   border: none;
   background-color: transparent;
   outline: none; }
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2); }
 
 body {
   font-size: 1.6rem;
@@ -155,6 +200,13 @@ h4 {
   color: white;
   text-transform: uppercase; }
 
+.booking__places {
+  font-size: 1.2rem; }
+
+.booking__btn {
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
 .team__testimonials--id {
   letter-spacing: .1rem;
   font-weight: 400;
@@ -194,6 +246,10 @@ h4 {
 .contact__label {
   line-height: 2rem; }
 
+.contact__btn {
+  text-transform: uppercase;
+  font-weight: 400; }
+
 .footer__copyright {
   letter-spacing: .1rem;
   font-weight: 400;
@@ -201,35 +257,40 @@ h4 {
   font-size: 1.4rem;
   text-align: center; }
 
-.footer__com {
+.footer__subtitle {
   letter-spacing: .1rem;
   font-weight: 400;
   font-family: 'Old Standard TT', serif; }
 
+.footer__link {
+  font-size: 1.4rem; }
+
 .landpage {
-  background-image: url(../img/landpage.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
   height: 100vh;
   margin: 0 auto;
+  background-image: url(../img/landpage.jpg);
+  background-position: center;
+  background-size: cover;
   position: relative; }
 
 .header__logo {
-  width: 6rem;
-  height: 6rem;
-  background-color: #ffcccc;
+  width: 15rem;
+  height: 10rem;
   position: absolute;
-  top: 2rem;
-  left: 2rem; }
+  top: 3rem;
+  left: 3rem; }
 
 .header__title {
-  width: 50rem;
-  color: #ff9999;
+  color: #ff9933;
   position: absolute;
-  bottom: 20%;
-  right: 0;
-  transform: translate(-50%, -50%); }
+  bottom: 30%;
+  right: 10%; }
+
+.header__subtitle {
+  float: right;
+  color: #999999;
+  font-size: 2rem;
+  transform: translateY(-2.5rem); }
 
 .welcome {
   padding: 7rem 0;
@@ -244,7 +305,9 @@ h4 {
   .welcome__w {
     background-image: url(../img/W.png);
     top: -3.5rem;
-    left: -5.5rem; }
+    left: -5.5rem;
+    background-position: center;
+    background-size: cover; }
   .welcome__welc {
     z-index: 5; }
   .welcome__subtitle {
@@ -261,7 +324,7 @@ h4 {
   position: fixed;
   top: 4rem;
   right: 4rem;
-  z-index: 2000;
+  z-index: 1000;
   text-align: center;
   cursor: pointer; }
 
@@ -272,8 +335,8 @@ h4 {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 500;
   transform: translateX(100%);
   transition: all .5s ease-out; }
 
@@ -300,7 +363,7 @@ h4 {
   display: inline-block;
   padding: 1rem 2rem;
   opacity: 0;
-  color: #ff9999;
+  color: #ff9933;
   transition: all .4s; }
 
 .navigation__link:link, .navigation__link:visited {
@@ -354,9 +417,11 @@ h4 {
   background-color: #999999; }
 
 .classes {
-  margin-top: 14rem; }
+  padding-top: 14rem; }
   .classes__01 {
     background-image: url(../img/01.png);
+    background-position: center;
+    background-size: cover;
     top: -5.5rem;
     left: -5rem; }
   .classes__gallery {
@@ -367,7 +432,6 @@ h4 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden; }
@@ -399,8 +463,8 @@ h4 {
     .classes__content--img {
       width: 32%;
       height: 15rem;
-      background-size: cover;
       background-position: center;
+      background-size: cover;
       display: inline-block; }
       .classes__content--img:not(:last-child) {
         margin-right: .5rem; }
@@ -438,11 +502,7 @@ h4 {
       background-color: #ff9933;
       padding: 1rem;
       float: right;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
       transition: all .3s; }
-      .classes__content--btn:hover {
-        transform: scale(1.1);
-        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2); }
     .classes__content--close {
       font-size: 4rem;
       margin-right: 2rem;
@@ -466,7 +526,6 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    cursor: pointer;
     padding: 1rem;
     transition: all .5s ease-in-out; }
   .classes__class {
@@ -477,6 +536,7 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    cursor: pointer;
     transition: all .5s ease-out; }
     .classes__class--1 {
       background-image: linear-gradient(to bottom, rgba(255, 204, 153, 0.5), #ffcc99), url(../img/pottery.jpg);
@@ -511,8 +571,8 @@ h4 {
     width: 8rem;
     height: 8rem;
     margin-bottom: 3rem;
-    background-size: cover;
-    background-position: center; }
+    background-position: center;
+    background-size: cover; }
     .classes__icon--1 {
       background-image: url(/img/teamwork.svg); }
     .classes__icon--2 {
@@ -522,6 +582,68 @@ h4 {
   .classes__text {
     text-align: justify;
     padding: 0 2rem; }
+    @media only screen and (max-width: 50em) {
+      .classes__text {
+        padding: 0 1rem; } }
+  .classes__booking {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1500;
+    display: none;
+    transition: all .5s; }
+
+.booking__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  width: 60%;
+  padding-bottom: 8rem;
+  background-color: white;
+  position: relative; }
+
+.booking__close {
+  font-size: 4rem;
+  color: #cccccc;
+  position: absolute;
+  top: 2rem;
+  right: 2rem; }
+
+.booking__list {
+  width: 60%;
+  margin: 0 auto;
+  list-style: none; }
+
+.booking__item {
+  border-bottom: 1px solid #cccccc;
+  padding: 2rem 0; }
+
+.booking__day, .booking__places {
+  display: inline-block;
+  vertical-align: middle; }
+
+.booking__btn {
+  background-color: #ff9933;
+  float: right;
+  color: white;
+  padding: .8rem 1.5rem;
+  transition: all .3s; }
+
+.booking__day, .booking__places {
+  margin-right: 2rem; }
+
+.booking__places {
+  border: 1px solid #999999;
+  color: #999999;
+  padding: .5rem; }
+
+.booking__form {
+  display: none; }
 
 .none {
   opacity: 0;
@@ -543,9 +665,12 @@ h4 {
   background-image: linear-gradient(to bottom, rgba(191, 229, 255, 0.7), #bfe5ff), url(../img/crea.jpg); }
 
 .studio {
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
   padding-top: 15rem;
-  border-top: 3px dotted #cccccc; }
+  border-top: 3px dotted #cccccc;
+  background-image: url(../img/path.svg);
+  background-position: center;
+  background-size: cover; }
   .studio__container {
     text-align: center; }
   .studio__block {
@@ -560,14 +685,16 @@ h4 {
   .studio__photoBox {
     width: 100%;
     height: 60vh;
-    background-color: beige;
     position: relative; }
+    @media only screen and (max-width: 50em) {
+      .studio__photoBox {
+        margin-bottom: 4rem; } }
   .studio__photo {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center; }
+    background-position: center;
+    background-size: cover; }
     .studio__photo--1 {
       background-image: url(../img/studio01.jpg);
       animation: fade1 8s infinite; }
@@ -579,6 +706,8 @@ h4 {
       animation: fade3 8s infinite; }
   .studio__02 {
     background-image: url(../img/02.png);
+    background-position: center;
+    background-size: cover;
     top: -5.5rem;
     left: -4.5rem; }
 
@@ -617,19 +746,50 @@ h4 {
   padding-top: 15rem; }
   .team__03 {
     background-image: url(../img/03.png);
+    background-position: center;
+    background-size: cover;
     top: -5.5rem;
     left: -4.5rem; }
   .team__container {
     position: relative;
     overflow: hidden; }
+    .team__container:hover .slide {
+      transform: translateY(0%);
+      transition: all .4s ease-out; }
+    .team__container:hover .team__photo {
+      transform: scale(1.1);
+      transition: all .2s ease-out; }
+      @media only screen and (max-width: 50em) {
+        .team__container:hover .team__photo {
+          transform: scale(1); } }
+    @media only screen and (max-width: 50em) {
+      .team__container {
+        margin: 0 auto;
+        text-align: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__container {
+        width: 65%; } }
   .team__desc {
     text-align: center; }
+    @media only screen and (max-width: 50em) {
+      .team__desc {
+        width: 40%; } }
   .team__photo {
     width: 100%;
     height: 35rem;
-    background-color: aquamarine;
     background-position: center;
     background-size: cover; }
+    @media only screen and (max-width: 50em) {
+      .team__photo {
+        width: 40%;
+        float: left; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__photo {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        float: none;
+        margin: 0 auto; } }
     .team__photo--1 {
       background-image: url(../img/team01.jpg); }
     .team__photo--2 {
@@ -656,34 +816,46 @@ h4 {
       transform: translate(-50%, -50%); }
     .team__testimonials--quote {
       position: relative; }
+    @media only screen and (max-width: 37.5em) {
+      .team__testimonials--id {
+        transform: translateY(-2rem); } }
   .team__icon {
     margin: 0 auto;
     width: 8rem;
     height: 8rem;
-    background-size: cover;
-    background-position: center; }
+    background-position: center;
+    background-size: cover; }
     .team__icon--1 {
       background-image: url(/img/man.svg); }
     .team__icon--2 {
       background-image: url(/img/girl.svg); }
+    @media only screen and (max-width: 37.5em) {
+      .team__icon {
+        width: 12rem;
+        height: 12rem; } }
   .team__quote {
     width: 8rem;
     height: 8rem;
     background-image: url(../img/quote.png);
+    background-position: center;
+    background-size: cover;
     position: absolute; }
     .team__quote--1 {
       top: -5rem;
       left: -9rem; }
+      @media only screen and (max-width: 37.5em) {
+        .team__quote--1 {
+          top: -15rem; } }
     .team__quote--2 {
       bottom: -5rem;
       right: -8rem;
       transform: rotate(180deg); }
-  .team__container:hover .slide {
-    transform: translateY(0%);
-    transition: all .4s ease-out; }
-  .team__container:hover .team__photo {
-    transform: scale(1.1);
-    transition: all .2s ease-out; }
+
+@media only screen and (max-width: 37.5em) {
+  .team__testimonialsBox {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5rem; } }
 
 .slide {
   background-image: linear-gradient(to bottom, #ffcccc 65%, rgba(255, 204, 204, 0.5));
@@ -695,18 +867,36 @@ h4 {
   left: 0;
   transition: all .2s ease-in-out, visibility 0s .2s;
   transform: translateY(100%); }
+  @media only screen and (max-width: 50em) {
+    .slide {
+      position: relative;
+      float: right;
+      width: 60%;
+      height: 35rem;
+      transform: translateY(0%); } }
+  @media only screen and (max-width: 37.5em) {
+    .slide {
+      padding: 2rem;
+      width: 100%;
+      max-height: 28rem;
+      background-image: none; } }
 
 .gallery {
   padding: 12rem 0;
   position: relative; }
   .gallery__04 {
     background-image: url(../img/04.png);
+    background-position: center;
+    background-size: cover;
     top: -5.5rem;
     left: -4.5rem; }
+  @media only screen and (max-width: 50em) {
+    .gallery__photoContainer {
+      width: 50%;
+      margin: 2rem auto; } }
   .gallery__photo {
     width: 100%;
     height: 25rem;
-    background-color: bisque;
     background-position: center;
     background-size: cover;
     cursor: pointer;
@@ -742,11 +932,11 @@ h4 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    visibility: hidden;
-    z-index: 1500; }
+    z-index: 1500;
+    visibility: hidden; }
   .gallery__fullImg {
     width: 80%;
-    padding: 1rem 0;
+    padding: 4rem 0;
     margin: 0 auto;
     text-align: center;
     color: white;
@@ -783,6 +973,8 @@ h4 {
   background-color: #ccffcc; }
   .contact__05 {
     background-image: url(../img/05.png);
+    background-position: center;
+    background-size: cover;
     top: -5.5rem;
     left: -4.5rem; }
   .contact__info {
@@ -796,43 +988,61 @@ h4 {
   .contact__form {
     padding: 0 2rem;
     width: 100%; }
+  .contact__box {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 1rem; }
   .contact__label {
     padding: .5rem; }
   .contact__field {
     min-width: 70%;
     float: right;
-    margin-right: 4rem;
+    margin-left: 1.5rem;
     padding: .5rem;
-    margin-bottom: 1rem;
     outline: none; }
     .contact__field:focus {
-      outline: 2px solid #33ff34; }
+      outline: 2px solid #4aca4a; }
     .contact__field--msg {
       height: 20rem;
       resize: none;
       overflow: auto; }
+  .contact__btn {
+    float: right;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: white;
+    background-color: #999999;
+    transition: all .3s; }
 
 .footer {
-  background-color: #999999;
+  background-color: #5a5a5a;
   color: white;
   padding: 5rem;
   padding-bottom: 2rem; }
+  .footer__container {
+    position: relative; }
   .footer__logo {
-    width: 80%;
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 5rem;
+    vertical-align: middle; }
     .footer__logo--img {
-      width: 8rem;
-      height: 8rem;
-      background-color: aquamarine; }
+      width: 15rem;
+      height: 10rem; }
+  .footer__thank {
+    width: 60%;
+    display: inline-block;
+    margin-right: 5rem;
+    vertical-align: middle; }
   .footer__com {
     display: inline-block;
-    width: 10%; }
-  .footer__catch {
+    vertical-align: middle;
+    width: 15%; }
+  .footer__subtitle {
     margin-bottom: 2rem; }
   .footer__follow {
     width: 4rem;
     height: 4rem;
-    background-color: beige;
+    margin-right: 1rem;
     display: inline-block; }
   .footer__copyright {
     margin-top: 2rem; }

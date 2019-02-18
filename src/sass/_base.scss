@@ -9,7 +9,27 @@
 
 html {
 	//This defines what 1rem is
-	font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
+    font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
+
+    @include respond(desktop) {
+        font-size: 62.5%;
+    }
+
+    @include respond(tab-land) {  // width < 1200 ?
+		font-size: 56.25%; // 1rem = 9px, 8/16 = 50%
+	}
+
+	@include respond(tab-port) {
+		font-size: 50%; // 1rem = 8px, 8/16 = 50%  // width < 800 ?
+	}
+
+	@include respond(phone) {
+		font-size: 45%;
+    }
+
+	@include respond(big-desktop) {
+		font-size: 75%; //1rem = 12px, 12/16 
+	}
 }
 
 body {
@@ -28,6 +48,12 @@ body {
 .row {
     max-width: $grid-width;
     margin: 0 auto;
+    @include respond(desktop) {
+        max-width: $grid-width-medium;
+    }
+    @include respond(tab-land){
+        max-width: $grid-width-small;
+    }
 
     &:not(:last-child){
         margin-bottom: $gutter-horizontal;
@@ -42,6 +68,11 @@ body {
             margin-right: $gutter-vertical;
         }
 
+        @include respond(phone) {
+            width: 100% !important;
+           
+        }
+
     }
 
     .col-1-of-2 {
@@ -50,6 +81,10 @@ body {
 
     .col-1-of-3 {
         width: calc((100% - 2 * #{$gutter-vertical}) / 3);
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 4rem;            
+        }
     }
 
     .col-2-of-3 {
@@ -72,12 +107,30 @@ body {
         width: calc((100% - 4 * #{$gutter-vertical}) / 5); // two times a third + the gutter width
     }
 
+    .col-1-of-6 {
+        width: calc((100% - 5 * #{$gutter-vertical}) / 6); // two times a third + the gutter width
+    }
+
+
 }
 
 .title{
     width: 130rem;
     margin: 0 auto;
     position: relative;
+
+    @include respond(desktop) {
+        max-width: $grid-width-medium;
+    }
+    @include respond(tab-land){
+        max-width: $grid-width-small;
+    }
+    @include respond(tab-port){
+        max-width: 70rem;        
+    }
+    @include respond(phone){
+        max-width: 60rem;        
+    }
 }
 
 .btn{
@@ -85,4 +138,12 @@ body {
     border: none;
     background-color: transparent;
     outline: none;
+
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);     
+    }
 }
+
+
+
