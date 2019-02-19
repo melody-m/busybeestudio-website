@@ -10,16 +10,17 @@
 html {
 	//This defines what 1rem is
     font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
+    width: 100vw;
 
     @include respond(desktop) {
         font-size: 62.5%;
     }
 
-    @include respond(tab-land) {  // width < 1200 ?
+    @include respond(big-tab) {  // width < 1200 ?
 		font-size: 56.25%; // 1rem = 9px, 8/16 = 50%
 	}
 
-	@include respond(tab-port) {
+	@include respond(small-tab) {
 		font-size: 50%; // 1rem = 8px, 8/16 = 50%  // width < 800 ?
 	}
 
@@ -51,7 +52,7 @@ body {
     @include respond(desktop) {
         max-width: $grid-width-medium;
     }
-    @include respond(tab-land){
+    @include respond(big-tab){
         max-width: $grid-width-small;
     }
 
@@ -77,18 +78,33 @@ body {
 
     .col-1-of-2 {
         width: calc((100% - #{$gutter-vertical}) / 2);
+        @include respond(small-tab) {
+            width: 100%;
+            margin-bottom: 4rem;      
+            padding: 0 4rem;      
+        }
     }
 
     .col-1-of-3 {
         width: calc((100% - 2 * #{$gutter-vertical}) / 3);
-        @include respond(tab-port) {
+        @include respond(small-tab) {
             width: 100%;
-            margin-bottom: 4rem;            
+            margin-bottom: 4rem;      
+            padding: 0 4rem;      
         }
+
     }
 
     .col-2-of-3 {
         width: calc(2 * ((100% - 2 * #{$gutter-vertical}) / 3) + #{$gutter-vertical}); // two times a third + the gutter width
+        @include respond(small-tab) {
+            width: 100%;
+            padding: 0 4rem;  
+                                 
+        }
+        @include respond(phone) {            
+            padding: 0 10rem;         
+        }
     }
 
     .col-1-of-4 {
@@ -122,14 +138,14 @@ body {
     @include respond(desktop) {
         max-width: $grid-width-medium;
     }
-    @include respond(tab-land){
+    @include respond(big-tab){
         max-width: $grid-width-small;
     }
-    @include respond(tab-port){
-        max-width: 70rem;        
+    @include respond(small-tab){
+        max-width: 60rem;        
     }
     @include respond(phone){
-        max-width: 60rem;        
+        max-width: 30rem;        
     }
 }
 

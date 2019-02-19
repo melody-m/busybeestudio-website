@@ -48,99 +48,106 @@
 
     &__gallery{
         width: 120rem;
-        height: 65vh;
-        
-        margin: 12rem auto;
-        
+        height: 65vh;        
+        margin: 12rem auto;        
         position: relative;
-
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         @include background;
+        background-color: aquamarine;
+        overflow: hidden;
 
-        overflow: hidden
-        
+        @include respond(big-tab) {
+            width:80%;
+        }
+        @include respond(small-tab) {
+            height: 80vh;
+        }  
+        @include respond(phone) {
+            height: 90vh;            
+        } 
+        @include respond(small-phone) {
+            height: 100vh;
+        }
+
     }
+
+
     &__info{
         width: 25%;
         height: 100%;
         padding: 5rem;
-        background-color: rgba(white, .8);        
+        background-color: rgba(white, .8); 
+
+        @include respond(small-tab) {
+            width: 100%; 
+            height: 25%;        
+            padding: 3rem;    
+        }   
+        @include respond(small-phone) {
+            height: 30%;
+        }
+    }
+
+    &__dummy{
+        @include respond(small-tab) {
+            width:100%;
+            height: 25%;
+        }
+        @include respond(small-phone) {
+            width:100%;
+            height: 30%;
+        }
     }
 
     &__contentBox{
         width: 75%;
-        height: 100%;     
-                
+        height: 100%; 
+        
+        @include respond(small-tab) {
+            width: 100%;             
+        } 
+        @include respond(phone) {
+            height: 90vh;            
+        } 
+        @include respond(small-phone) {
+            height: 100vh;
+        }
     }
 
     &__contentRelative{
         position: relative;        
         height: 100%;
+
+        @include respond(small-tab) {
+            height: 75%;          
+        } 
+        @include respond(small-phone) {
+            height: 70%;
+        }
+
     }
 
     &__content{
+        width: 80%;   
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 80%;   
-        
         padding: 3rem;  
         background-color: rgba(white, .8);        
+        transform: translate(-50%, -50%);
 
-        &--gallery{
-            width: 100%;            
-            padding: 3.5rem 0;
-            text-align: center;
+        @include respond(big-tab) {
+            width: 90%; 
+        }    
+        @include respond(small-tab) {
+            height: 80%;          
+        } 
+        @include respond(small-phone) {
+            height: 90%;
         }
-        &--text{
-            padding: 0 1rem;
-        }
-
-        &--img{
-            width: 32%;
-            height: 15rem;
-            @include background;
-            display: inline-block;
-            &:not(:last-child) {
-                margin-right:.5rem;
-            }
-
-            &-1{background-image: url(../img/pottery1.jpg)}
-            &-2{background-image: url(../img/pottery2.jpg)}
-            &-3{background-image: url(../img/pottery3.jpg)}
-            &-4{background-image: url(../img/drawing.jpg)}
-            &-5{background-image: url(../img/drawing1.jpg)}
-            &-6{background-image: url(../img/drawing3.jpg)}
-            &-7{background-image: url(../img/sewing1.jpg)}
-            &-8{background-image: url(../img/sewing2.jpg)}
-            &-9{background-image: url(../img/sewing3.jpg)}
-            &-10{background-image: url(../img/flower1.jpg)}
-            &-11{background-image: url(../img/flower2.jpg)}
-            &-12{background-image: url(../img/flower3.jpg)}
-            &-13{background-image: url(../img/crea1.jpg)}
-            &-14{background-image: url(../img/crea2.jpg)}
-            &-15{background-image: url(../img/crea3.jpg)}
-
-        }
-        &--btn{
-            
-            background-color: $color-two-dark;
-            padding: 1rem;
-            float: right;                      
-            transition: all .3s;
-        }
-
-        &--close{
-            font-size: 4rem;
-            margin-right: 2rem;
-            color: white;
-            float: right;
-        }
+   
     }
 
     &__slideL {       
@@ -165,7 +172,12 @@
         text-align: center;          
        
         padding: 1rem;    
-        transition: all .5s ease-in-out;        
+        transition: all .5s ease-in-out; 
+
+        @include respond(small-tab) {
+            transform: translate(-50%, -50%);            
+        }
+
     }
 
     &__class{
@@ -176,10 +188,15 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        cursor: pointer;
-        
+        cursor: pointer;       
         
         transition: all .5s ease-out;
+
+        @include respond(small-tab) {
+            width: 100%;
+            height:auto;
+            border-right: none;            
+        }
         
         &--1{
             @include classBG-1;
@@ -202,13 +219,13 @@
             background-position: center;
         }
 
-    &:hover .classes__subtitle{
-        transform: translate(-50%, -3rem);
-        transition: all .3s ease-in-out;
+        &:hover .classes__subtitle{
+            transform: translate(-50%, -3rem);
+            transition: all .3s ease-in-out;
+        }
     }
-}
 
-  
+ 
     &__details {
         padding: 4rem 0;
         background-color: $color-four;
@@ -239,10 +256,16 @@
         text-align: justify;
         padding: 0 2rem;
 
-        @include respond(tab-port) {
+        @include respond(small-tab) {
             padding: 0 1rem;
+           // margin-bottom: 4rem;
         }
+        @include respond(phone) {
+            padding: 0 6rem;         
+        }
+
     }
+
 
     &__booking{
         @include fullScreenBox;
@@ -250,6 +273,129 @@
         transition: all .5s;
     }
 }
+
+.content{
+    &__gallery{
+        width: 100%;            
+        padding: 3.5rem 0;
+        text-align: center;
+        position: relative;
+
+        @include respond(phone) {
+            display: none;
+            // height: 15rem;
+            // padding:0;
+            // margin: 3rem 0;            
+        } 
+    }
+    &__title{
+        @include respond(small-tab) {
+            height: 15%;          
+        } 
+        @include respond(phone) {
+            height: 15%;          
+        } 
+    }
+    &__text{
+        padding: 0 1rem;
+        @include respond(small-tab) {
+            height: 30%;          
+        } 
+        @include respond(phone) {
+            height: 70%;          
+        } 
+    }
+    
+    &__img{
+        width: 32%;
+        height: 15rem;
+        @include background;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right:.5rem;
+        }
+
+        @include respond(phone) {
+            width: 100%;  
+            // position: absolute;
+            // top: 0;
+            // left: 0;             
+        } 
+            
+        &--1{background-image: url(../img/pottery1.jpg)}
+        &--2{background-image: url(../img/pottery2.jpg)}
+        &--3{background-image: url(../img/pottery3.jpg)}
+        &--4{background-image: url(../img/drawing.jpg)}
+        &--5{background-image: url(../img/drawing1.jpg)}
+        &--6{background-image: url(../img/drawing3.jpg)}
+        &--7{background-image: url(../img/sewing1.jpg)}
+        &--8{background-image: url(../img/sewing2.jpg)}
+        &--9{background-image: url(../img/sewing3.jpg)}
+        &--10{background-image: url(../img/flower1.jpg)}
+        &--11{background-image: url(../img/flower2.jpg)}
+        &--12{background-image: url(../img/flower3.jpg)}
+        &--13{background-image: url(../img/crea1.jpg)}
+        &--14{background-image: url(../img/crea2.jpg)}
+        &--15{background-image: url(../img/crea3.jpg)}
+    
+    }
+    &__btn{
+        
+        background-color: $color-two-dark;
+        padding: 1rem;
+        float: right;                      
+        transition: all .3s;
+        @include respond(phone) {
+        margin-top: 2rem;
+        }
+        
+    }
+    
+    &__close{
+        font-size: 4rem;
+        margin-right: 2rem;
+        color: white;
+        float: right;
+    
+        @include respond(small-tab) {
+            position: absolute;
+            top: -30%;
+            right:2rem;
+            color:$color-grey-medium;                
+        } 
+        @include respond(phone) {
+            top: -30%;
+            right: 1rem;
+              
+        } 
+    }
+}
+
+
+.info{
+
+    &__classes, &__fees{
+        @include respond(small-tab) {
+            display: inline-block;
+            vertical-align: top;
+        }  
+    }
+
+    &__subtitle, &__text{
+        @include respond(small-tab) {
+            display: inline-block;
+            vertical-align: top;
+        }  
+    }  
+
+    &__text{
+        margin: 0 2rem;
+        margin-bottom: 2rem;
+    }       
+}      
+
+
 
 .booking{
     &__container{

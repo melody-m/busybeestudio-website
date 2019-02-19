@@ -3,6 +3,11 @@
     padding: 12rem 0;
     background-color: $color-five-light;
 
+    @include respond(big-tab) {
+        padding: 10rem 0;
+        padding-bottom: 6rem;
+    }
+
     &__05{
         background-image: url(../img/05.png);
         @include background;
@@ -14,17 +19,29 @@
         width: 50%;
         float: left;
         margin-bottom: 2rem;
+        @include respond(phone) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
 
     &__details {
         width: 50%;
         float: left;
         margin-bottom: 2rem;
+        @include respond(phone) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
     }
 
     &__form{
         padding: 0 2rem;
         width: 100%;
+
+        @include respond(big-tab) {
+            padding: 0;
+        }
     }
 
     &__box {

@@ -11,7 +11,9 @@
     }
 
     &__photoContainer{
-        @include respond(tab-port) {            
+        overflow: hidden;
+
+        @include respond(phone) {            
             width: 50%;
             margin: 2rem auto;
         }
@@ -24,9 +26,13 @@
         cursor: pointer;
         transition: all .3s;
 
-        &Container{
-            overflow: hidden;
+        @include respond(big-tab) {            
+            height: 15rem;
         }
+        @include respond(phone-port) {            
+            height: 25rem;
+        }
+
 
         &--1{
             background-image: url(../img/gallery-1.jpg);
@@ -71,19 +77,47 @@
     &__fullImg{
         
         width: 80%;
+        //height: 100%;
         padding: 4rem 0;
         margin: 0 auto;
         text-align: center;
         color: white;
         z-index: 2000;
 
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__figure {
+        max-height: 100%;
     }
 
     &__img{
+        
         display: block;
         margin: 0 auto;
-        max-height: 80rem;        
+        max-height: 80rem;
+        
+        @include respond(big-tab) {
+            max-height: 75rem;
+            max-width: 80rem;
+        } 
+
+        @include respond(small-tab-port) {            
+            max-width: 75rem;
+        }       
+        
+        @include respond(phone-port) {
+            max-width: 36rem;                    
+        }
+        @include respond(phone-land) {
+            max-height: 36rem;
+            max-width: 60rem;                    
+        }
     }
+
     &__caption{
         padding: 1rem 0;
         color: white;
@@ -102,11 +136,29 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        z-index:2000;
+
+        @include respond(small-tab) {
+            top: 95%;                    
+        }
+        @include respond(small-tab-port) {            
+            top: 50%;
+        } 
+        @include respond(phone) {
+            top: 95%;                    
+        }
+
         &--L{
-            left: 10%;
+            left:5%;
+            @include respond(small-tab-port) {            
+                left:3%;
+            } 
         }
         &--R{
-            right: 10%;
+            right: 5%;
+            @include respond(small-tab-port) {            
+                right: 3%;
+            } 
         }
 
         &--btn{

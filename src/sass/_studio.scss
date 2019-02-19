@@ -17,9 +17,15 @@
 
         &--photo{
             width: 45rem;
+            @include respond(phone) {
+                width: 30rem;           
+            }
         }
         &--text{
             width: 45rem;
+            @include respond(phone) {
+                width: 30rem;           
+            }
         }
     }
 
@@ -28,8 +34,11 @@
         height: 60vh;
         position: relative;
         
-        @include respond(tab-port) {
+        @include respond(small-tab) {
             margin-bottom: 4rem;            
+        }
+        @include respond(small-tab) {
+            height: 40vh;         
         }
     }
 

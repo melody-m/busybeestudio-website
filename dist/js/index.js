@@ -3,8 +3,8 @@ const classesDOM = {
     classesBtn : document.querySelectorAll('.classes__subtitle'),
     classesSlider : document.querySelectorAll('.classes__class'),
     slideSideR : document.querySelector('.classes__slideR'),
-    closeBtn : document.querySelectorAll('.classes__content--close'),
-    bookBtn : document.querySelectorAll('.classes__content--btn'),
+    closeBtn : document.querySelectorAll('.content__close'),
+    bookBtn : document.querySelectorAll('.content__btn'),
     classBooking : document.querySelector('.classes__booking'),
     bookClose : document.querySelectorAll('.booking__close'),
     bookDates : document.querySelector('.booking__dates')
@@ -102,7 +102,7 @@ function courseExtend(ID) {
     
     // Fades off the courses images
     classesSliderArr.forEach((cur) => {
-        cur.classList.add('none');
+        cur.classList.add('none');       
     })            
 
     //Sliders come in

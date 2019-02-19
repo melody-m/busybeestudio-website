@@ -17,9 +17,13 @@ body{
     color: $color-grey-dark;
 }
 h1{
-    font-size: 12rem;
-    
+    font-size: 12rem;    
     @include oldFont;
+
+    @include respond(phone) {
+        font-size: 8rem;
+        line-height: 7rem;
+    }
 }
 
 h2{
@@ -49,6 +53,13 @@ h4{
     z-index: 1;
 }
 
+
+.header{
+    &__subtitle{
+        font-size: 2rem;
+    }
+}
+
 .navigation {
     &__link{
     font-size: 2rem;
@@ -68,42 +79,72 @@ h4{
     &__subtitle{
         @include oldFont;
         font-size: 3rem;
-    }
 
-    &__info{
-        &--title{
-            @include oldFont;
+        
+        @include respond(big-tab) {
+            font-size: 2.5rem;
+        }
+        @include respond(small-tab) {
             font-size: 3rem;
-        }
-        &--subtitle{
-            @include oldFont;
-            font-size: 2rem;
-        }
-        &--text{
-            font-weight: 300;
-            letter-spacing: .1rem;
-        }
+        } 
+   
+    }
+}
 
+.content{
+    
+    &__title{
+        @include oldFont;
+        text-align: center;
+        font-size: 2rem;
+    }
+    &__text{
+        text-align: justify;
+        font-size: 1.5rem;
+        
+    }
+    &__btn{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+
+        @include respond(phone) {
+            font-size: 1.2rem;   
+        } 
     }
 
-    &__content{
-        &--title{
-            @include oldFont;
-            text-align: center;
-            font-size: 2rem;
-        }
-        &--text{
-            text-align: justify;
-            font-size: 1.5rem;
-            
-        }
-        &--btn{
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            color: white;
-            text-transform: uppercase;
+}
+
+.info{
+    
+    &__title{
+        @include oldFont;
+        font-size: 3rem;  
+        
+        @include respond(phone) {
+            font-size: 2rem;   
+        } 
+  
+    }
+    &__subtitle{
+        @include oldFont;
+        font-size: 2rem;
+    
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }  
+        
+    }
+    &__text{
+        font-weight: 300;
+        letter-spacing: .1rem;
+    
+        @include respond(small-tab) {
+            font-size: 1.4rem;
         }
     }
+
 }
 
 .booking{

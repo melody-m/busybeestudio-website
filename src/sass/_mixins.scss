@@ -7,22 +7,51 @@
 // [1500-1800] is where our normal style apply
 // 1800px + :      Big desktop - min-width
 
+// @media screen and (orientation:portrait) { … }
+// @media screen and (orientation:landscape) { … }
+
 @mixin  respond($breakpoint) {
+
+
+    
+    @if $breakpoint == small-phone {
+        @media (max-height: 37.5em) {@content};   //600px
+    }
     @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) {@content};   //600px
+        @media (max-width: 37.5em) {@content};   //600px
     }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 50em) {@content};  //800/16=50
+    @if $breakpoint == phone-port {        
+        @media screen and (max-width: 37.5em) and (orientation:portrait) {@content};
     }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) {@content};  //1200px
+    @if $breakpoint == phone-land {        
+        @media screen and (max-width: 56.25em) and (orientation:landscape) {@content};
+    }
+
+    @if $breakpoint == small-tab {
+        @media (max-width: 56.25em) {@content};  //800/16=50
+    }
+    @if $breakpoint == small-tab-port {
+        @media (max-width: 56.25em) and (orientation:portrait) {@content};  
+    }
+    @if $breakpoint == small-tab-land {
+        @media (max-width: 75em) and (orientation:landscape) {@content};  
+    }    
+    
+    @if $breakpoint == big-tab {
+        @media (max-width: 75em) {@content};  //1200px
     }
     @if $breakpoint == desktop {
-        @media only screen and (max-width: 93.75em) {@content};  //1500em
+        @media (max-width: 93.75em) {@content};  //1500em
     }
     @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) {@content};  //1800px
+        @media (min-width: 112.5em) {@content};  //1800px
     }
+
+    //No Hover touchscreen
+    @if $breakpoint == mobile {
+        @media (hover: none) {@content};
+    }
+    
 }
 
 //MIXINS LAYOUT
