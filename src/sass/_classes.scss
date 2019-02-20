@@ -48,7 +48,7 @@
 
     &__gallery{
         width: 120rem;
-        height: 65vh;        
+        height: 65rem;        
         margin: 12rem auto;        
         position: relative;
         display: flex;
@@ -64,9 +64,13 @@
         @include respond(small-tab) {
             height: 80vh;
         }  
+
         @include respond(phone) {
             height: 90vh;            
         } 
+        @include respond(phone-land) {
+            height: 120vh;            
+        }
         @include respond(small-phone) {
             height: 100vh;
         }
@@ -80,11 +84,18 @@
         padding: 5rem;
         background-color: rgba(white, .8); 
 
+        @include respond(big-tab) {
+        padding: 2rem;
+        }
+
         @include respond(small-tab) {
             width: 100%; 
             height: 25%;        
             padding: 3rem;    
         }   
+        @include respond(phone-land) {
+            height: 30%;
+        }
         @include respond(small-phone) {
             height: 30%;
         }
@@ -94,6 +105,10 @@
         @include respond(small-tab) {
             width:100%;
             height: 25%;
+        }
+        @include respond(phone-land) {
+            width:100%;
+            height: 30%;
         }
         @include respond(small-phone) {
             width:100%;
@@ -111,6 +126,9 @@
         @include respond(phone) {
             height: 90vh;            
         } 
+        @include respond(phone-land) {
+            height: 120vh;            
+        }
         @include respond(small-phone) {
             height: 100vh;
         }
@@ -123,6 +141,9 @@
         @include respond(small-tab) {
             height: 75%;          
         } 
+        @include respond(phone-land) {
+            height: 70%;
+        }
         @include respond(small-phone) {
             height: 70%;
         }
@@ -139,7 +160,7 @@
         transform: translate(-50%, -50%);
 
         @include respond(big-tab) {
-            width: 90%; 
+            width: 88%; 
         }    
         @include respond(small-tab) {
             height: 80%;          
@@ -173,11 +194,6 @@
        
         padding: 1rem;    
         transition: all .5s ease-in-out; 
-
-        @include respond(small-tab) {
-            transform: translate(-50%, -50%);            
-        }
-
     }
 
     &__class{
@@ -282,11 +298,12 @@
         position: relative;
 
         @include respond(phone) {
-            display: none;
-            // height: 15rem;
-            // padding:0;
-            // margin: 3rem 0;            
+            display: none;      
         } 
+        @include respond(phone-land) {
+            display: none;         
+        } 
+        
     }
     &__title{
         @include respond(small-tab) {
@@ -304,6 +321,9 @@
         @include respond(phone) {
             height: 70%;          
         } 
+        @include respond(phone-land) {
+            height: 60%;          
+        } 
     }
     
     &__img{
@@ -317,10 +337,7 @@
         }
 
         @include respond(phone) {
-            width: 100%;  
-            // position: absolute;
-            // top: 0;
-            // left: 0;             
+            width: 100%;           
         } 
             
         &--1{background-image: url(../img/pottery1.jpg)}
@@ -347,8 +364,11 @@
         float: right;                      
         transition: all .3s;
         @include respond(phone) {
-        margin-top: 2rem;
+            margin-top: 2rem;
         }
+        @include respond(phone-land) {
+            margin-top: 2rem;
+            }
         
     }
     
@@ -356,7 +376,11 @@
         font-size: 4rem;
         margin-right: 2rem;
         color: white;
-        float: right;
+        float: right;        
+
+        @include respond(big-tab) {
+            margin-right: 1rem;
+        }
     
         @include respond(small-tab) {
             position: absolute;
@@ -409,6 +433,13 @@
         padding-bottom: 8rem;
         background-color: white;
         position: relative;
+
+        @include respond(small-tab) {
+            width: 80%;        
+        } 
+        @include respond(phone) {
+            width: 90%;        
+        }
     }
     &__close {
         font-size: 4rem;        
@@ -426,6 +457,11 @@
         border-bottom : 1px solid $color-grey-light;
         padding: 2rem 0;
         
+    }
+    &__day{
+        @include respond(phone) {
+            margin-bottom: 2rem;
+        }
     }
 
     &__day, &__places{

@@ -18,7 +18,7 @@
             margin-right: $gutter-vertical;
         }
         
-        @include respond(big-tab) {
+        @include respond(mobile) {
             width: 100%;
             margin-bottom: 4rem;      
             padding: 0 4rem;      
@@ -58,7 +58,7 @@
     &__desc{
         text-align: center;
 
-        @include respond(big-tab) {
+        @include respond(mobile) {
             width: 100%;
         }
 
@@ -102,7 +102,7 @@
     }
 
     &__testimonials{
-        text-align: justify;
+       
         background-color: $color-two;
         margin-top: 10rem;
         padding: 6rem 0;
@@ -124,6 +124,7 @@
 
         &--quote{
             position: relative;
+            text-align: justify;
         }
 
         &--id{

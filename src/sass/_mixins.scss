@@ -15,7 +15,7 @@
 
     
     @if $breakpoint == small-phone {
-        @media (max-height: 37.5em) {@content};   //600px
+        @media (max-height: 37.5em) and (orientation:portrait) {@content};   //600px
     }
     @if $breakpoint == phone {
         @media (max-width: 37.5em) {@content};   //600px

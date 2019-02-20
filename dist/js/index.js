@@ -70,6 +70,8 @@ const bookBtnArr = Array.from(classesDOM.bookBtn);
 const bookCloseArr = Array.from(classesDOM.bookClose);
 const photoGalleryArr = Array.from(galleryDOM.photoGallery);
 
+const menu = document.getElementById('navi-toggle');
+const menuLinks = document.querySelectorAll('.navigation__link');
 
 function getID(e){
     let fullID;
@@ -238,6 +240,14 @@ function previousPhoto(){
 /***************************************************EVENT_LISTENERS*********************************************************/
 
 function setEventListeners(){
+
+    //Menu listener
+
+    menuLinks.forEach((cur) =>{
+        cur.addEventListener('click', () =>{
+            menu.checked = false;
+        });
+    });
 
     //Course listeners
     

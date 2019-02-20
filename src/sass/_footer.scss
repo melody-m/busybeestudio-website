@@ -3,6 +3,10 @@
     color: white;
     padding: 5rem;
     padding-bottom: 2rem;
+
+    @include respond(phone) {
+        padding: 2rem;      
+    }
     
 
     &__container{
@@ -15,9 +19,19 @@
         margin-right: 5rem;
         vertical-align: middle;
 
+        @include respond(phone) {
+            margin-right: 2rem;      
+        }
+
         &--img{
             width: 15rem;
             height: 10rem;
+
+            @include respond(phone) {
+                width: 9rem;
+                height: 6rem;        
+            }
+    
         }        
     }
     &__thank{
@@ -25,12 +39,31 @@
         display: inline-block;
         margin-right: 5rem;
         vertical-align: middle;
+
+        @include respond(big-tab) {
+            width: 40%;           
+        }
+        @include respond(phone) {
+            margin-right: 2rem;     
+        }
+
     }
 
     &__com{
         display: inline-block;
         vertical-align: middle;
         width: 15%;
+
+        @include respond(big-tab) {
+            width: 20%;           
+        }
+        @include respond(phone) {
+            width: 30%;           
+        }
+        @include respond(small-phone) {
+            width: 20%;  
+            text-align: center;       
+        }
 
     }
     &__subtitle{
@@ -41,7 +74,12 @@
         width: 4rem;
         height: 4rem;
         margin-right: 1rem;        
-        display: inline-block;       
+        display: inline-block;  
+        @include respond(phone) {
+            width: 3rem;
+            height: 3rem;           
+        }
+     
        
     }
 
