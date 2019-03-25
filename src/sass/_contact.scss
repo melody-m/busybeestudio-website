@@ -9,7 +9,7 @@
     }
 
     &__05{
-        background-image: url(../img/05.png);
+        background-image: url(../img/title/05.png);
         @include background;
         top: -5.5rem;
         left: -4.5rem;
@@ -20,9 +20,13 @@
         float: left;
         margin-bottom: 2rem;
         margin-right: 1rem;
+        @include respond(small-tab) {
+            width: 20%;
+            display: inline-block;
+            margin-right: 2rem;
+        }
         @include respond(phone) {
-            width: 100%;
-            margin-bottom: 1rem;
+            width: 40%;
         }
     }
 
@@ -30,9 +34,13 @@
         width: 50%;
         float: left;
         margin-bottom: 2rem;
+        @include respond(small-tab) {
+            width: 20%;
+            display: inline-block;
+            margin-right: 3rem;
+        }
         @include respond(phone) {
-            width: 100%;
-            margin-bottom: 3rem;
+            width: 40%;
         }
     }
 

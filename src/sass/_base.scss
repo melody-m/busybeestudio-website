@@ -10,7 +10,6 @@
 html {
 	//This defines what 1rem is
     font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
-    width: 100vw;
 
     @include respond(desktop) {
         font-size: 62.5%;
@@ -27,10 +26,6 @@ html {
 	@include respond(phone) {
 		font-size: 45%;
     }
-
-	@include respond(big-desktop) {
-		font-size: 75%; //1rem = 12px, 12/16 
-	}
 }
 
 body {
@@ -154,11 +149,6 @@ body {
     border: none;
     background-color: transparent;
     outline: none;
-
-    &:hover{
-        transform: scale(1.1);
-        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);     
-    }
 }
 
 

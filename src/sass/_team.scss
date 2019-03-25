@@ -3,7 +3,7 @@
     padding-top: 15rem;
 
     &__03{
-        background-image: url(../img/03.png);
+        background-image: url(../img/title/03.png);
         @include background;
         top: -5.5rem;
         left: -4.5rem;
@@ -92,13 +92,47 @@
             
         }
 
+        &--1{
+            background-image: url(../img/team/team01.jpg);
+            @include respond(small-tab) {
+                background-image: url(../img/team/team01-small.jpg);
+            }
+        }
+        &--2{
+            background-image: url(../img/team/team02.jpg);
+            @include respond(small-tab) {
+                background-image: url(../img/team/team02-small.jpg);
+            }
 
-        &--1{background-image: url(../img/team01.jpg);}
-        &--2{background-image: url(../img/team02.jpg);}
-        &--3{background-image: url(../img/team03.jpg);}
-        &--4{background-image: url(../img/team04.jpg);}
-        &--5{background-image: url(../img/team05.jpg);}
-        &--6{background-image: url(../img/team06.jpg);}
+        }
+        &--3{
+            background-image: url(../img/team/team03.jpg);
+            @include respond(small-tab) {
+                background-image: url(../img/team/team03-small.jpg);
+            }
+
+        }
+        &--4{
+            background-image: url(../img/team/team04.jpg);
+            @include respond(small-tab) {
+                background-image: url(../img/team/team04-small.jpg);
+            }
+
+        }
+        &--5{
+            background-image: url(../img/team/team05.jpg);
+            @include respond(small-tab) {
+                background-image: url(../img/team/team05-small.jpg);
+            }
+
+        }
+        &--6{
+            background-image: url(../img/team/team06.jpg);
+            @include respond(small-tab) {
+                background-image: url(../img/team/team06-small.jpg);
+            }
+
+        }
     }
 
     &__testimonials{

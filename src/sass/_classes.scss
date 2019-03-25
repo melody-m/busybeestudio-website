@@ -4,13 +4,19 @@
         rgba($color-two, 0.5), 
         rgba($color-two, 1)),             
         url(../img/pottery.jpg);
+        @include respond(phone) {
+            background-image: linear-gradient(to bottom, rgba($color-two, 0.5), rgba($color-two, 1)), url(../img/pottery-small.jpg);        
+        } 
 }
 @mixin classBG-2{
     background-image: linear-gradient(
         to bottom, 
         rgba($color-three, 0.5), 
         rgba($color-three, 1)),       
-        url(../img/drawing2.jpg);    
+        url(../img/drawing.jpg);  
+        @include respond(phone) {
+            background-image: linear-gradient(to bottom, rgba($color-three, 0.5), rgba($color-three, 1)), url(../img/drawing-small.jpg);        
+        }   
 }
 @mixin classBG-3{
     background-image: linear-gradient(
@@ -18,6 +24,9 @@
         rgba($color-four, 0.5), 
         rgba($color-four, 1)), 
         url(../img/sewing.jpg);
+        @include respond(phone) {
+            background-image: linear-gradient(to bottom, rgba($color-four, 0.5), rgba($color-four, 1)), url(../img/sewing-small.jpg);        
+        }  
 }
 @mixin classBG-4{
     background-image: linear-gradient(
@@ -25,6 +34,9 @@
         rgba($color-five, 0.5), 
         rgba($color-five, 1)), 
         url(../img/flower.jpg);
+        @include respond(phone) {
+            background-image: linear-gradient(to bottom, rgba($color-five, 0.5), rgba($color-five, 1)), url(../img/flower-small.jpg);        
+        }  
 }
 @mixin classBG-5{
     background-image:linear-gradient(
@@ -32,6 +44,9 @@
         rgba($color-one, 0.7), 
         rgba($color-one, 1)), 
         url(../img/crea.jpg);
+        @include respond(phone) {
+            background-image: linear-gradient(to bottom, rgba($color-one, 0.5), rgba($color-one, 1)), url(../img/crea-small.jpg);        
+        }  
 }
 
 
@@ -40,7 +55,7 @@
     padding-top: 14rem;
 
     &__01{
-        background-image: url(../img/01.png);
+        background-image: url(../img/title/01.png);
         @include background;
         top: -5.5rem;
         left: -5rem;
@@ -340,41 +355,121 @@
             width: 100%;           
         } 
             
-        &--1{background-image: url(../img/pottery1.jpg)}
-        &--2{background-image: url(../img/pottery2.jpg)}
-        &--3{background-image: url(../img/pottery3.jpg)}
-        &--4{background-image: url(../img/drawing.jpg)}
-        &--5{background-image: url(../img/drawing1.jpg)}
-        &--6{background-image: url(../img/drawing3.jpg)}
-        &--7{background-image: url(../img/sewing1.jpg)}
-        &--8{background-image: url(../img/sewing2.jpg)}
-        &--9{background-image: url(../img/sewing3.jpg)}
-        &--10{background-image: url(../img/flower1.jpg)}
-        &--11{background-image: url(../img/flower2.jpg)}
-        &--12{background-image: url(../img/flower3.jpg)}
-        &--13{background-image: url(../img/crea1.jpg)}
-        &--14{background-image: url(../img/crea2.jpg)}
-        &--15{background-image: url(../img/crea3.jpg)}
+        &--1{
+            background-image: url(../img/classes/pottery1.jpg);
+            @include respond(phone) {
+                background-image: url(../img/classes/pottery1-small.jpg);
+            }
+        }
+        &--2{
+            background-image: url(../img/classes/pottery2.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/pottery2-small.jpg);
+            }
+        }
+        &--3{
+            background-image: url(../img/classes/pottery3.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/pottery3-small.jpg);
+            }
+        }
+        &--4{
+            background-image: url(../img/classes/drawing1.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/drawing1-small.jpg);
+            }
+        }
+        &--5{
+            background-image: url(../img/classes/drawing2.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/drawing2-small.jpg);
+            }
+        }
+        &--6{
+            background-image: url(../img/classes/drawing3.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/drawing3-small.jpg);
+            }
+        }
+        &--7{
+            background-image: url(../img/classes/sewing1.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/sewing1-small.jpg);
+            }
+        }
+        &--8{
+            background-image: url(../img/classes/sewing2.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/sewing2-small.jpg);
+            }
+        }
+        &--9{
+            background-image: url(../img/classes/sewing3.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/sewing3-small.jpg);
+            }
+        }
+        &--10{
+            background-image: url(../img/classes/flower1.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/flower1-small.jpg);
+            }
+        }
+        &--11{
+            background-image: url(../img/classes/flower2.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/flower2-small.jpg);
+            }
+        }
+        &--12{
+            background-image: url(../img/classes/flower3.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/flower3-small.jpg);
+            }
+        }
+        &--13{
+            background-image: url(../img/classes/crea1.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/crea1-small.jpg);
+            }
+        }
+        &--14{
+            background-image: url(../img/classes/crea2.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/crea2-small.jpg);
+            }
+        }
+        &--15{
+            background-image: url(../img/classes/crea3.jpg);
+                        @include respond(phone) {
+                background-image: url(../img/classes/crea3-small.jpg);
+            }
+        }
     
     }
     &__btn{
         
         background-color: $color-two-dark;
         padding: 1rem;
-        float: right;                      
+        float: right;       
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);                
         transition: all .3s;
         @include respond(phone) {
             margin-top: 2rem;
         }
         @include respond(phone-land) {
             margin-top: 2rem;
-            }
+        }
+        &:hover{
+            transform: scale(1.2);    
+        }
         
     }
     
     &__close{
         font-size: 4rem;
         margin-right: 2rem;
+        margin-top: 1rem;
         color: white;
         float: right;        
 
@@ -475,7 +570,12 @@
         float: right;       
         color : white ;
         padding: .8rem 1.5rem;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2); 
         transition: all .3s;
+
+        &:hover{
+            transform: scale(1.2);    
+        }
     }
     
     &__day, &__places{

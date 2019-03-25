@@ -3,17 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Busy Bee Studio</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         
         <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Fredericka+the+Great|Open+Sans:300,400" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
     </head>
 
-<body>
+<body class="noscroll">
+
+        <div class="loader load">
+                <div id="overlay" class="load"></div>
+                <div id="spinner" class="load"></div>
+        </div>
+
     <header class = "landpage">
-        <a href="#home"><img src="img/logo.svg" alt="Busy Bee Studio logo" class="header__logo"></a>
+        <a href="#home">
+            <img src="img/logo.svg" alt="Busy Bee Studio logo" class="header__logo">             
+        </a>
                 
         <div class="header__title">
             <h1>Let's create!</h1>
@@ -103,7 +119,8 @@
                 <div class="classes__class classes__class--2" id ="class-2" >
                     <div class="classes__subtitle classes__subtitle--2">Drawing Painting</div>
                 </div>
-                <div class="classes__class classes__class--3" id ="class-3" >       <div class="classes__subtitle classes__subtitle--3">Sewing</div>
+                <div class="classes__class classes__class--3" id ="class-3" >       
+                    <div class="classes__subtitle classes__subtitle--3">Sewing</div>
                 </div>
                 <div class="classes__class classes__class--4" id ="class-4" >
                     <div class="classes__subtitle classes__subtitle--4">Flower Arrangements</div>
@@ -427,9 +444,24 @@
             <div class="studio__container clearfix">
                 <div class="studio__block studio__block--photo">
                     <div class="studio__photoBox">
-                        <div class="studio__photo studio__photo--1"></div>
-                        <div class="studio__photo studio__photo--2"></div>
-                        <div class="studio__photo studio__photo--3"></div>
+                        <div class="studio__photo studio__photo--1">                                                   
+                            <img srcset="img/studio/studio01-small.jpg 300w, img/studio/studio01-large.jpg 600w"
+                            sizes="(max-width:56.25em) 36vw,(max-width: 37.5em) 20vw, 600px"
+                            alt="Photo of the studio"                            
+                            src="img/studio/studio01-large.jpg">                            
+                        </div>
+                        <div class="studio__photo studio__photo--2">
+                            <img srcset="img/studio/studio02-small.jpg 300w, img/studio/studio02-large.jpg 600w"
+                            sizes="(max-width:56.25em) 36vw,(max-width: 37.5em) 20vw, 600px"
+                            alt="Photo of the studio"                            
+                            src="img/studio/studio02-large.jpg">      
+                        </div>
+                        <div class="studio__photo studio__photo--3">
+                            <img srcset="img/studio/studio03-small.jpg 300w, img/studio/studio03-large.jpg 600w"
+                            sizes="(max-width:56.25em) 36vw,(max-width: 37.5em) 20vw, 600px"
+                            alt="Photo of the studio"                            
+                            src="img/studio/studio03-large.jpg">      
+                        </div>
                     </div>              
                 </div>            
 
@@ -491,10 +523,10 @@
                     <div class="team__photo team__photo--3"></div>
                     <div class="team__desc slide">
                         <div class="team__desc--name">Hannah Peters</div>
-                        <div class="team__desc--exp">Terry is our fantastic potter; he started a Pottery/Ceramic Course when he was 16
-                            and quickly realized that he had a natural aptitude for this artistic medium. Over the years, he has developed various 
-                            pottery techniques and specialised in ‘wheel work’. He has a real passion for it and loves sharing his knowledge 
-                            with his students.</div> 
+                        <div class="team__desc--exp">Hannah is a qualified Fine Art Practitioner, a Visual Artist and an Art Tutor. 
+                            She studied contemporary fine art and passed with honours at Bristol University. She 
+                            enjoys teaching at all skill level and revels in seeing her students gain confidence and 
+                            knowledge.</div> 
                     </div>
                 </div>
             </div>
@@ -506,10 +538,9 @@
                     <div class="team__photo team__photo--4"></div>
                     <div class="team__desc slide">
                         <div class="team__desc--name">Elise Diaz</div>
-                        <div class="team__desc--exp">Terry is our fantastic potter; he started a Pottery/Ceramic Course when he was 16
-                            and quickly realized that he had a natural aptitude for this artistic medium. Over the years, he has developed various 
-                            pottery techniques and specialised in ‘wheel work’. He has a real passion for it and loves sharing his knowledge 
-                            with his students. 
+                        <div class="team__desc--exp">Elise has been sewing from a very early age, initially being taught by her Grandmother,
+                            she has since completed a degree in Fashion Design. She runs a successful bridal and occasions wear business, designing bespoke pieces.
+                            She loves to share her professional tips with her students, helping them achieve the perfect garnment.
                         </div> 
                     </div>
                 </div>
@@ -519,10 +550,9 @@
                     <div class="team__photo team__photo--5"></div>
                     <div class="team__desc slide">
                         <div class="team__desc--name">Lucy Kim</div>
-                        <div class="team__desc--exp">Terry is our fantastic potter; he started a Pottery/Ceramic Course when he was 16
-                            and quickly realized that he had a natural aptitude for this artistic medium. Over the years, he has developed various 
-                            pottery techniques and specialised in ‘wheel work’. He has a real passion for it and loves sharing his knowledge 
-                            with his students. 
+                        <div class="team__desc--exp"> Lucy is an award-winning event florist. She shares her time between her business, running demonstrations 
+                            all over UK and teaching in our wonderful studio. She has a huge knowledge of flowers and picks out the plants and flowers we grow
+                            with our gardener. 
 
                         </div> 
                     </div>
@@ -533,10 +563,9 @@
                     <div class="team__photo team__photo--6"></div>
                     <div class="team__desc slide">
                         <div class="team__desc--name">Mathilde Legrand</div>
-                        <div class="team__desc--exp">Terry is our fantastic potter; he started a Pottery/Ceramic Course when he was 16
-                            and quickly realized that he had a natural aptitude for this artistic medium. Over the years, he has developed various 
-                            pottery techniques and specialised in ‘wheel work’. He has a real passion for it and loves sharing his knowledge 
-                            with his students.
+                        <div class="team__desc--exp"> Mathilde is passionate about promoting good art practice, 
+                            which she sees as a vital part of her role as a professional artist. She has extensive experience 
+                            of developing creativity in beginners and more experienced artists.
                         </div> 
                     </div>
                 </div>
@@ -653,12 +682,14 @@
         </div>
 
         <div class="gallery__fullScreen">
-            <button class="gallery__close btn">&times;</button>           
-            <div class="gallery__fullImg">     
-                <!-- figure added by js-->
-            </div>            
-            <div class="gallery__arrow gallery__arrow--L"><button class="gallery__arrow--btn btn">&larr;</button></div>
-            <div class="gallery__arrow gallery__arrow--R"><button class="gallery__arrow--btn btn">&rarr;</button></div>
+            <button class="gallery__close btn">&times;</button>       
+            <div class="gallery__fullScreen--cont">
+                <div class="gallery__fullImg">     
+                    <!-- figure added by js-->
+                </div>            
+                <div class="gallery__arrow gallery__arrow--L"><button class="gallery__arrow--btn btn">&larr;</button></div>
+                <div class="gallery__arrow gallery__arrow--R"><button class="gallery__arrow--btn btn">&rarr;</button></div>
+            </div>    
         </div>
 
 
@@ -742,8 +773,8 @@
                 <div class="footer__subtitle">Follow us!</div> 
                 <div class="footer__social">
                     <button class ="btn"><img src="img/fb-logo.png" alt="facebook" class="footer__follow"></button>
-                    <button class ="btn"><img src="img/inst-logo.png" alt="facebook" class="footer__follow"></button>
-                    <button class ="btn"><img src="img/twitter-logo.png" alt="facebook" class="footer__follow"></button>
+                    <button class ="btn"><img src="img/inst-logo.png" alt="instagram" class="footer__follow"></button>
+                    <button class ="btn"><img src="img/twitter-logo.png" alt="twitter" class="footer__follow"></button>
 
                 </div>
             </div>
@@ -751,7 +782,7 @@
         <div class="footer__copyright">© Copyright 2019 All rights reserved. Company Registration No: 0000000000 | VAT No: GB 000 000 000 | Registered in England.</div>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/bundle.js"></script>
     
 </body>
 

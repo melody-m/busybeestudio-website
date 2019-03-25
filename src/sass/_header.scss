@@ -4,10 +4,16 @@
     height: 100vh;
     margin: 0 auto;
 
-    background-image: linear-gradient(rgba(white,1), rgba(white, 0)), url(../img/landpage.jpg);
+    background-image: linear-gradient(rgba(white,1), rgba(white, 0)), url(../img/landpage-large.jpg);
     @include background;
-
     position: relative;
+
+    @include respond(small-tab) {
+        background-image: linear-gradient(rgba(white,1), rgba(white, 0)), url(../img/landpage-medium.jpg);
+    }
+    @include respond(phone) {
+        background-image: linear-gradient(rgba(white,1), rgba(white, 0)), url(../img/landpage-small.jpg);
+    }
 }
 
 .header{
@@ -85,7 +91,7 @@
     }
 
     &__w{
-        background-image: url(../img/W.png);
+        background-image: url(../img/title/W.png);
         top: -5rem;
         left: -5.5rem;
         @include background;
