@@ -123,8 +123,8 @@
         height: 7rem;
         width : 7rem;
         position: fixed;
-        top: 4rem;
-        right: 4rem;
+        top: 2rem;
+        right: 2rem;
         z-index:1000;
         text-align: center;
         cursor: pointer;
@@ -145,7 +145,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        background-color: rgba(white, .85);
+        background-color: rgba(white, .95);
         z-index:500;
         transform:translateX(100%);
         transition: all .5s ease-out;

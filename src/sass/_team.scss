@@ -17,6 +17,12 @@
         &:not(:last-child) {
             margin-right: $gutter-vertical;
         }
+
+        @include respond(small-tab) {
+            width: 100%;
+            margin-bottom: 4rem;      
+            padding: 0 4rem;      
+        }
         
         @include respond(mobile) {
             width: 100%;
@@ -57,6 +63,17 @@
 
     &__desc{
         text-align: center;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: .5rem;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: $color-grey-dark;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color-three-dark; 
+        }
 
         @include respond(mobile) {
             width: 100%;
@@ -175,8 +192,8 @@
         height: 8rem;        
         @include background;
 
-        &--1{background-image: url(/img/man.svg);}
-        &--2{background-image: url(/img/girl.svg);}
+        &--1{background-image: url(../img/man.svg);}
+        &--2{background-image: url(../img/girl.svg);}
 
         @include respond(phone) {            
             width: 12rem;
@@ -218,7 +235,7 @@
 .slide {
     background-image: linear-gradient(to bottom,
 		rgba($color-three, 1) 65%,
-        rgba($color-three, 0.5));
+        rgba($color-three, 0.7));
         
     padding: 4rem;
     position: absolute;
