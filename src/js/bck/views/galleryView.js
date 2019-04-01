@@ -20,8 +20,7 @@ export const galleryDOM = {
         img9 : "Demonstration of a floral crown built",
         img10 : "Our beginners sewers first pouches"
     }
-};
-
+}
 
 export const photoGallArr = Array.from(galleryDOM.photoGallery);
 
@@ -30,7 +29,9 @@ export function getImgID(){
     const fullImg = document.querySelector('.gallery__img');
     const fullImgID = fullImg.id; 
     const splitID = fullImgID.split('-');
-    return splitID[1];
+    const imgID = splitID[1];
+
+    return imgID;
 }
 
 
@@ -61,20 +62,18 @@ export function addFigure(id){
 
 
     if (window.matchMedia("(max-width: 600px)").matches) {
-        galleryDOM.fullImg.insertAdjacentHTML('beforeend', newHtmlSmall);
+        galleryDOM.fullImg.insertAdjacentHTML('beforeend', newHtmlSmall);         
     } else if (window.matchMedia("(max-width: 900px)").matches) {
-        galleryDOM.fullImg.insertAdjacentHTML('beforeend', newHtmlMed);
+        galleryDOM.fullImg.insertAdjacentHTML('beforeend', newHtmlMed);             
     } else {
-      galleryDOM.fullImg.insertAdjacentHTML('beforeend', newHtml) ;
+      galleryDOM.fullImg.insertAdjacentHTML('beforeend', newHtml) ; 
     }
 }
 
-
-export function removeFigure() {
-    const imgFigure = document.querySelector('.gallery__figure');
-    imgFigure.parentNode.removeChild(imgFigure);
+export function removeFigure(){
+    const imgFigure = document.querySelector('.gallery__figure');            
+    imgFigure.parentNode.removeChild(imgFigure);    
 }
-
 
 export function photoFullScreen(ID) {
 
@@ -83,30 +82,30 @@ export function photoFullScreen(ID) {
 }
 
 
-export function closePhoto() {
-    galleryDOM.fullScreen.style.visibility = 'hidden';
+export function closePhoto(){
+    galleryDOM.fullScreen.style.visibility = 'hidden';  
     removeFigure();
 }
 
-export function nextPhoto(){
+export function nextPhoto(){    
 
-    const ID = getImgID();
+    const ID = getImgID();   
     const nextID = parseInt(ID) +1;
 
-    if(ID < 10 ){
+    if(ID < 10 ){        
         removeFigure();
-        // Add next one
-        addFigure(nextID);
+        //Add next one
+        addFigure(nextID);    
     }
 }
 
 export function previousPhoto(){
 
-    const ID = getImgID();
+    const ID = getImgID();   
     const previousID = parseInt(ID) -1;
-    if(ID > 1) {
+    if(ID > 1){        
         removeFigure();
-        // Add next one
+        //Add next one
         addFigure(previousID);
     }
 }

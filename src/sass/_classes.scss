@@ -1,51 +1,31 @@
 @mixin classBG-1{
-    background-image: linear-gradient(
-        to bottom, 
-        rgba($color-two, 0.5), 
-        rgba($color-two, 1)),             
-        url(../img/pottery.jpg);
+    background-image: url(../img/pottery.jpg);
         @include respond(phone) {
-            background-image: linear-gradient(to bottom, rgba($color-two, 0.5), rgba($color-two, 1)), url(../img/pottery-small.jpg);        
+            background-image: url(../img/pottery-small.jpg);        
         } 
 }
 @mixin classBG-2{
-    background-image: linear-gradient(
-        to bottom, 
-        rgba($color-three, 0.5), 
-        rgba($color-three, 1)),       
-        url(../img/drawing.jpg);  
+    background-image: url(../img/drawing.jpg);  
         @include respond(phone) {
-            background-image: linear-gradient(to bottom, rgba($color-three, 0.5), rgba($color-three, 1)), url(../img/drawing-small.jpg);        
+            background-image: url(../img/drawing-small.jpg);        
         }   
 }
 @mixin classBG-3{
-    background-image: linear-gradient(
-        to bottom, 
-        rgba($color-four, 0.5), 
-        rgba($color-four, 1)), 
-        url(../img/sewing.jpg);
+    background-image: url(../img/sewing.jpg);
         @include respond(phone) {
-            background-image: linear-gradient(to bottom, rgba($color-four, 0.5), rgba($color-four, 1)), url(../img/sewing-small.jpg);        
+            background-image: url(../img/sewing-small.jpg);        
         }  
 }
 @mixin classBG-4{
-    background-image: linear-gradient(
-        to bottom, 
-        rgba($color-five, 0.5), 
-        rgba($color-five, 1)), 
-        url(../img/flower.jpg);
+    background-image: url(../img/flower.jpg);
         @include respond(phone) {
-            background-image: linear-gradient(to bottom, rgba($color-five, 0.5), rgba($color-five, 1)), url(../img/flower-small.jpg);        
+            background-image: url(../img/flower-small.jpg);        
         }  
 }
 @mixin classBG-5{
-    background-image:linear-gradient(
-        to bottom, 
-        rgba($color-one, 0.7), 
-        rgba($color-one, 1)), 
-        url(../img/crea.jpg);
+    background-image: url(../img/crea.jpg);
         @include respond(phone) {
-            background-image: linear-gradient(to bottom, rgba($color-one, 0.5), rgba($color-one, 1)), url(../img/crea-small.jpg);        
+            background-image: url(../img/crea-small.jpg);        
         }  
 }
 
@@ -105,6 +85,10 @@
             height: 22rem;        
             padding: 3rem;    
         }   
+        @include respond(small-phone) {
+            border-bottom: 1px solid $color-grey-light; 
+            border-top: 1px solid $color-grey-light; 
+        } 
 
     }
 
@@ -141,6 +125,12 @@
         @include respond(small-tab) {
             height: 80%;          
         } 
+        @include respond(phone) {
+            height: 70%;          
+        }
+        @include respond(small-phone) {
+            height: 100%;          
+        }
     }
 
     &__content{
@@ -168,8 +158,12 @@
                 background: $color-grey-light; 
             }       
         } 
+        @include respond(phone) {
+            height: 80%;
+        }
         @include respond(small-phone) {
-            height: 90%;
+            width: 100%;
+            height: 100%;
         }
    
     }
@@ -299,7 +293,10 @@
         width: 100%;            
         padding: 3.5rem 0;
         text-align: center;
-        position: relative;        
+        position: relative;    
+        @include respond(phone) {
+            display: none;      
+        }     
     }
     &__title{
         @include respond(small-tab) {
@@ -464,8 +461,11 @@
         } 
         @include respond(phone) {
             top: -30%;
-            right: 1rem;
-              
+            right: 1rem;              
+        } 
+        @include respond(small-phone) {
+            top: -28%;
+            right: 1rem;              
         } 
     }
 }

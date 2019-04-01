@@ -8,14 +8,12 @@ export const classesDOM = {
     classBooking : document.querySelector('.classes__booking'),
     bookClose : document.querySelectorAll('.booking__close'),
     bookDates : document.querySelector('.booking__dates')
-};
-
+}
 
 export const classesArr = Array.from(classesDOM.classesSlider);
 export const classesBtnArr = Array.from(classesDOM.bookBtn);
 export const classesCloseArr = Array.from(classesDOM.bookClose);
 export const classesCloseBtnArr = Array.from(classesDOM.closeBtn);
-
 
 const booking = [
     {
@@ -48,44 +46,43 @@ const booking = [
         time : ['5 - 7pm', '6 - 8pm', '11 - 1pm'],
         slot : ['2 slots left', '2 slots left', '1 slots left']
     }
-];
+]
+
 
 
 export function courseExtend(ID) {
-
-    // List all the classes
+    
+    //List all the classes
     const galClasses = listClasses();
-
-    // If more than one class, remove the last one to change BG previously applied
-    if (galClasses.length > 1){
+                            
+    if (galClasses.length > 1){ //if more than one class, remove the last one to change BG previously applied
         classesDOM.classGallery.classList.remove(`${galClasses[galClasses.length -1]}`);
-    }
+    };             
 
-    // Add class to change BG
+    //Add class to change BG
     classesDOM.classGallery.classList.add(`classBG-js-${ID}`);
-
+    
     // Fades off the courses images
     classesArr.forEach((cur) => {
-        cur.classList.add('none');
-    });
+        cur.classList.add('none');       
+    })            
 
-    // Sliders come in
+    //Sliders come in
     document.querySelector(`.classes__slideL--${ID}`).style.transform = 'translateX(0%)';
-    document.querySelector(`.classes__slideR--${ID}`).style.transform = 'translateX(0%)';
+    document.querySelector(`.classes__slideR--${ID}`).style.transform = 'translateX(0%)';   
 }
-
 
 export function bookDisplay(id) {
 
-    // Display day time places from object according to id selected
+    //display day time places from object according to id selected
     const index = id -1;
 
-    // Add list container
+    //Add list container
 
     const htmlBook = `<ul class ="booking__list"></ul>`;
     classesDOM.bookDates.insertAdjacentHTML('beforeend', htmlBook); 
 
-    // Add item in list according to array in objects
+    //Add item in list according to array in objects
     const bookList = document.querySelector('.booking__list');
 
     for (let i = 0 ; i < booking[index].day.length ; i++) {
@@ -96,31 +93,29 @@ export function bookDisplay(id) {
                 <div class="booking__places">${booking[index].slot[i]}</div>
                 <button class = "btn booking__btn">Book</button>                                
             </li>`;
-        bookList.insertAdjacentHTML('beforeend', htmlItem);
+        bookList.insertAdjacentHTML('beforeend', htmlItem);        
     }
 
-    // Display list
+    //Display list
     classesDOM.classBooking.style.display = 'block';
 }
 
-
 export function bookClose(){
     const bookList = document.querySelector('.booking__list');
-
-    // Remove class booking list
-    if(bookList){
+    //remove class booking list
+    if(bookList){                
         bookList.parentNode.removeChild(bookList);    
     }
-
-    // Hide full screen booking
+    //Hide full screen booking
     classesDOM.classBooking.style.display = 'none';
 }
 
 
 export function listClasses(){
-    // Get an array with all the classes on the gallery container
+    //Get an array with all the classes on the gallery container
     let classList = classesDOM.classGallery.classList;
-    return Array.from(classList);
+    let classListArr =  Array.from(classList);
+    return classListArr;
 }
 
 export function courseClose(ID) {
