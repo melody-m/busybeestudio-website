@@ -39,6 +39,9 @@
         display: inline-block;
         margin-right: 5rem;
         vertical-align: middle;
+        & a {
+            color: white;
+        }
 
         @include respond(big-tab) {
             width: 40%;           
@@ -85,5 +88,6 @@
 
     &__copyright{
         margin-top: 2rem;
+        color: white;
     }
 }
